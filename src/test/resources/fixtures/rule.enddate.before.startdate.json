@@ -1,0 +1,31 @@
+{
+    "key":"min.localhost.metric.30m.5s",
+    "keyFormat":"min.localhost.metric.30m.5s",
+    "alertQueue" : "sample",
+    "checks" : [
+        {
+            "operation":"range",
+            "value":"5-10",
+            "alertLevel" : "0"
+        },
+        {
+            "operation":"range",
+            "value":"3-4",
+            "alertLevel" : "1"
+        },
+        {
+            "operation":"lt",
+            "value":"3",
+            "alertLevel" : "2"
+        }
+
+    ],
+    "unit":"instances",
+    "validity":{
+        "startDate":"2012-11-10",
+        "endDate":"2011-12-15",
+        "days":"WEEKDAY,WEEKEND",
+        "times":"00:00:00-11:59:59,12:00:00-23:59:59",
+        "dates" : "2012/11/11-2013/11/30,2013/12/01-2013/12/31"
+    }
+}

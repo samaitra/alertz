@@ -1,0 +1,13 @@
+#! /bin/bash
+
+PKG=fk-alert-service
+#Removing the modules manifests and templates once the packge is removed
+
+if [ "$1" == "purge" ]
+then
+	[ -e "/etc/$PKG/" ] && rm -rf "/etc/$PKG/"
+fi
+
+[ -e "/usr/share/$PKG" ] && rm -rf "/usr/share/$PKG"
+
+exit 0

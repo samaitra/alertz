@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="flipkart.alert.domain">
+
+    <class name="flipkart.alert.domain.ScheduledRule" table="RULES"
+           catalog="fk_alert_service">
+        <cache  usage="read-write" region="name1" include="all"/>
+
+        <id name="ruleId" type="long" column="RULE_ID">
+            <generator class="native" />
+        </id>
+
+        <property name="name" column="NAME"/>
+        <property name="team" column="TEAM"/>
+
+        <set name="dataSerieses" table="DATA_SERIES" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_ID" not-null="true"/>
+            <one-to-many class="flipkart.alert.domain.DataSeries" />
+        </set>
+
+        <set name="checks" table="RULE_CHECKS" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_ID" not-null="true"/>
+            <one-to-many class="RuleCheck" />
+        </set>
+
+        <set name="variables" table="ALERT_VARIABLES" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_ID" not-null="true"/>
+            <one-to-many class="flipkart.alert.domain.AlertVariable" />
+        </set>
+
+        <set name="endPoints" table="END_POINTS" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_ID" not-null="true"/>
+            <one-to-many class="flipkart.alert.domain.EndPoint" />
+        </set>
+
+    </class>
+</hibernate-mapping>

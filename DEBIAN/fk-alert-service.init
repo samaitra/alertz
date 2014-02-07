@@ -1,0 +1,90 @@
+#!/bin/sh
+
+PKG=fk-alert-service
+DB=fk_alert_service
+CONF_FILE=/etc/$PKG/$PKG.yml
+LIB_JARS=/usr/share/$PKG/lib/*:/usr/share/$PKG/app/*
+LOG_FILE=/var/log/flipkart/$PKG/$PKG.log
+DB_DIR=/usr/share/$PKG/db
+CMD=$1
+PID=""
+NOHUP=`which nohup`
+FIND_APP=`which fk-alert-service`
+HOSTNAME=`/bin/hostname -f`
+JMX="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=4444 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+JVM_ARGS="$JMX -Xmx4g -Xms512m -Xss512k -XX:+UseConcMarkSweepGC -XX:NewRatio=3 -XX:SurvivorRatio=4"
+
+
+check_process() {
+    PID=`pgrep -f "AlertService"`
+}
+
+start() {
+    echo "Starting $PKG..."
+	check_process
+
+	if [ $? -ne 0 ]; then
+                nohup java $JVM_ARGS -cp $LIB_JARS flipkart.alert.AlertService $CONF_FILE >> $LOG_FILE 2>&1 &
+	else
+		echo "$PKG already running as PID $PID"
+	fi
+}
+
+stop() {
+    echo "Stopping $PKG..."
+    check_process    
+    if [ $? -ne 0 ]; then
+        echo "$PKG not runnning"
+    else
+		kill -15 $PID
+    fi
+}
+
+status() {
+    check_process
+    if [ $? -ne 0 ]; then
+		echo "$PKG not runnning"
+    else
+		echo "$PKG running as PID $PID"
+    fi
+}
+
+restart() {
+    echo "Restarting $PKG ..."
+    stop
+    start
+}
+
+create_db() {
+    cd $DB_DIR
+    ./create_db.sh $DB
+}
+
+recreate_db() {
+    cd $DB_DIR
+    ./recreate_db.sh $DB
+}
+
+case "$CMD" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+	status
+	;;
+    restart)
+        restart
+        ;;
+    create_db)
+	create_db
+	;;
+    recreate_db)
+        recreate_db
+        ;;
+     *)
+        echo "Usage $0 {start|stop|restart|status}"
+        RETVAL=1
+esac

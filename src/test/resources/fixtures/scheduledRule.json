@@ -1,0 +1,31 @@
+{
+    "ruleId": null,
+    "name": "r1",
+    "team": "t1",
+    "dataSerieses":
+            [
+                {
+                    "name": "series1",
+                    "source": "w3.graphite",
+                    "query": "from=-2hours&until=now&height=750&title=METRIC_2_Unavailability_Ratio_percentage&target=legendValue%28alias%28asPercent%28divideSeries%28summarize%28statsd.w3.website.core_metrics.OOSProduct._all.Count.per_min%2C%2210min%22%29%2Csummarize%28statsd.w3.website.core_metrics.pageView._all.Count.per_min%2C%2210min%22%29%29%2C1%29%2C%22OOS%2BDiscontinued%20To%20Total%20PV%3A%20Last%20Value%20%28%25%29%3A%20%22%29%2C%22last%22%29&uniq=0.13684863388497093&format=json"
+                }
+            ],
+    "checks":
+            [
+                {
+                    "description": "desc1",
+                    "booleanExpression": "$last.series1 > 1",
+                    "alertLevel": "1"
+                }
+            ],
+    "schedule":
+    {
+        "startDate": 1352505600000,
+        "endDate": 1450137600000,
+        "dates": "2012/11/11-2012/11/30,2012/12/01-2014/12/14",
+        "days": "MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY",
+        "times": "10:00:00-22:00:00,23:00:00-23:59:59",
+        "interval": "1m"
+    },
+    "alertQueue": "t1-r1"
+}

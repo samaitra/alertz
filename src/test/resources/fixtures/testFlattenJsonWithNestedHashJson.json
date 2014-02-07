@@ -1,0 +1,19 @@
+{
+  "json" : {
+    "Key1" : {
+      "Key1.1" : "value1.1",
+      "Key1.2" : "value1.2",
+      "Key1.3" : "value1.3"
+    },
+    "Key2" : 10,
+    "Key3" : 10.0
+  },
+  "flatJsonMap" : {
+    "Key1.Key1.1" : "value1.1",
+    "Key1.Key1.2" : "value1.2",
+    "Key1.Key1.3" : "value1.3",
+    "Key2" : 10,
+    "Key3" : 10.0
+  }
+}
+

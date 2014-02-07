@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Flipkart Alerts </title>
+
+    <script src="js/jquery-1.9.0.js" type="text/javascript"> </script>
+    <script src="js/knockout-2.2.1.js" type="text/javascript"> </script>
+    <script src="js/jquery-ui.js" type="text/javascript"> </script>
+    <script src="js/jquery.sheepItPlugin-1.1.1.js" type="text/javascript"> </script>
+    <script src="bootstrap/js/bootstrap.js" type="text/javascript"> </script>
+    <script src="js/jquery.jeditable.js" type="text/javascript"> </script>
+
+    <script src="js/index.js" type="text/javascript"></script>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="headerPlaceHolder"></div>
+<div class="container-fluid">
+    <fieldset>
+        <legend>Geting Started</legend>
+        <p><b>A Scheduled Rule comprises of many parts. </b></p>
+        <p>To explain each component, lets consider a requirement where a team needs to be alerted whenever the number of 500 exceptions cross 50 in a span of 5 minutes.</p>
+        <p>Lets assume that the count of these exceptions are being pushed into Graphite, which would act as a data source while defining the rule.</p>
+
+        <hr/>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Rule Name</b></label>
+                <div class="span10">
+                    <p>This is the name of the rule.<br/> Lets name it<b> 500Count.</b></p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Team Name</b></label>
+                <div class="span10">
+                    <p>Since we need to monitor the number of 500s on the website, team name can be <b>Website</b></p>
+                    <p>Team Name is used to group rules. </p>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <p class="lead">Data Series</p>
+                </div>
+                <p>Data Series is a placeholder where you define how you would pull the raw data from any data source.</p>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Source</b></label>
+                <div class="span10">
+                    <p>This is the name of the data source as defined in Alertz. The name maps to the source connection details for the particular instance of graphite. </p>
+                    <p>In this case <b>w3.graphite</b> represents the instance of graphite at http://w3-api3.nm.flipkart.com/</p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Query</b></label>
+                <div class="span10">
+                    <p>The query on Graphite that gives the number of 500s in the last 5 minutes. </p>
+                    <p><b>from=-6min&until=-1min&target=*.w3.website.core_metrics.500Error._all.Count.per_min</b>.</p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Name</b></label>
+                <div class="span10">
+                    <p>An alias for the query. </p>
+                    <p>Lets call it <b>500CountCurrent</b></p>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <p class="lead">Variables</p>
+                </div>
+                <p>Variables are custom metrics as defined by the user. These are derived from the data pulled from the data source. These variables will be further used for writing checks.</p>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Name</b></label>
+                <div class="span10">
+                    <p>This is a Computed metric. Lets call it <b>500CountSum</b>.</p>
+                    <p>Subsequently it can be accessed as $500CountSum in the checks</p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Value</b></label>
+                <div class="span10">
+                    <p> Alert Service offers default metrics out of the box. You can use any of these to derive the variable value</p><ul><li>$min.500CountCurrent</li><li>$max.500CountCurrent</li><li>$first.500CountCurrent</li><li>$last.500CountCurrent</li><li>$stdDev.500CountCurrent</li><li>$avg.500CountCurrent</li><li>$median.500CountCurrent</li><li>$sum.500CountCurrent</li><li>$75thPercentile.500CountCurrent</li><li>$99thPercentile.500CountCurrent</li><li>$sum.500CountCurrent</li><li>$count.500CountCurrent</li></ul></p>
+                    <p>Additionally, you can use another variable here.</p>
+                    <p>Here we need <b>$sum.500CountCurrent</b></p>
+                    <p>You can add any arithmetic operation here. <br/><b>Example:</b> ($first.500CountCurrent+ $last.500CountCurrent)/2</p>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <p class="lead">Checks</p>
+                </div>
+                <p>This is where you define the threshold.</p>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Description</b></label>
+                <div class="span10">
+                    <p>Content here will be sent out when there is a breach.</p>
+                    <p><b>The current 500 count for the last 5 min is $500CountSum</b></p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Boolean Expression</b></label>
+                <div class="span10">
+                    <p>Alert Service uses <a href="http://commons.apache.org/proper/commons-jexl/">jexl</a> to evaluate expressions. If this expression is evaluated as true, an alert is raised.</p>
+                    <p><b>$500CountSum > 50</b></p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Alert Level</b></label>
+                <div class="span10">
+                    <p>Currently Alertz supports alert levels as described in nagios.</p>
+                    <ul>
+                        <li>0: Info</li>
+                        <li>1: Warning</li>
+                        <li>2: Critical</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <p class="lead">Schedule</p>
+                </div>
+                <p>This describes the scheduling details for the rule.</p>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Start Date</b></label>
+                <div class="span10">
+                    <p>The date when the rule should be first triggered.</p>
+                    <p><b>2013-07-01</b></p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>End Date</b></label>
+                <div class="span10">
+                    <p>The date when the rule should be last triggered.</p>
+                    <p><b>2015-07-01</b></p>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <label class="control-label span2"><b>Interval</b></label>
+                <div class="span10">
+                    <p>How often should the rule be triggered</p>
+                    <p><b>5m</b></p>
+                    <p><u>Other examples:</u></p>
+                     <p>1s runs the rule every second</p><p>1m runs the rule every minute</p><p>1h runs the rule every hour</p><p>1d runs the rule every day</p>
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+
+</div>
+</body>
+</html>

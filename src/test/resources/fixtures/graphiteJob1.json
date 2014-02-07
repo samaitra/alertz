@@ -1,0 +1,11 @@
+{
+    "metricAlias": "localhost.metric",
+    "query":"sumSeries(cms.cms-service.nm.cms-svc[3-5].flipkart.cms.service.InstrumentedCMSServiceImpl.getProductDetails.timer.15MinuteRate,cms.cms-service.nm.cms-service*.flipkart.cms.service.InstrumentedCMSServiceImpl.getProductDetails.timer.15MinuteRate)",
+    "metricSource" : "scm.graphite",
+    "dataDuration":"30m",
+    "schedule":{
+        "startDate":"2012/12/10-10:10:10",
+        "endDate":"2015/12/30-10:10:10",
+        "interval":"5s"
+    }
+}

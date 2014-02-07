@@ -1,0 +1,24 @@
+
+FFFFFF LL     IIIIII  PPPPPP  KK    KK      AA       RRRRRR   TTTTTT
+FF     LL       II    PP  PP  KK  KK       AAAA      RR  RR     TT
+FFFFFF LL       II    PPPPPP  KK KK       AA  AA     RRRRRR     TT
+FF     LL       II    PP      KK KK      AAAAAAAA    RRR        TT
+FF     LL       II    PP      KK  KK    AA      AA   RR RR      TT
+FF     LLLLLL IIIIII  PP      KK    KK AA        AA  RR  RR     TT
+
+
+             AA       LL     EEEEEE  RRRRRR  TTTTTT
+            AAAA      LL     EE      RR  RR    TT
+           AA  AA     LL     EEEEEE  RRRRRR    TT
+          AAAAAAAA    LL     EEEEEE  RRR       TT
+         AA      AA   LL     EE      RR RR     TT
+        AA        AA  LLLLLL EEEEEE  RR  RR    TT
+
+
+  SSSSSS  EEEEEE RRRRRR VV          VV IIIIII     CCCCC  EEEEEE
+  SS      EE     RR  RR  VV        VV    II     CCC      EE
+  SSSSSS  EEEEEE RRRRRR   VV      VV     II    CCC       EEEEEE
+      SS  EEEEEE RRR       VV    VV      II    CCC       EEEEEE
+      SS  EE     RR RR      VV  VV       II     CCC      EE
+  SSSSSS  EEEEEE RR  RR      VVVV      IIIIII     CCCCC  EEEEEE
+

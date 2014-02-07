@@ -1,0 +1,125 @@
+package flipkart.alert.schedule.job;
+
+import com.flipkart.http.HTTPRequest;
+import com.yammer.dropwizard.logging.Log;
+import flipkart.alert.domain.*;
+import flipkart.alert.storage.AbstractHttpSourceClient;
+<<<<<<< HEAD
+import flipkart.alert.storage.OpenTsdbClient;
+=======
+import flipkart.alert.storage.TSDBHttpClient;
+>>>>>>> ca829f468f8da63f0895cece52dce8efcb6e8804
+import flipkart.alert.util.RuleHelper;
+import org.quartz.*;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import static flipkart.alert.storage.MetricSourceClientFactory.clientFactory;
+
+/**
+ * User: nitinka
+ */
+public class RuleJob implements Job {
+    private static Log log = Log.forClass(RuleJob.class);
+    static {
+        log = Log.forClass(RuleJob.class);
+    }
+
+    @Override
+    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+        JobDetail jobDetail = jobExecutionContext.getJobDetail();
+        JobDataMap jobDataMap = jobDetail.getJobDataMap();
+        ScheduledRule rule = getRule(jobDataMap);
+
+        try {
+            if(rule.canRunNow()) {
+                Alert alert = runRule(rule, false);
+                if(alert != null) {
+                    OpenTsdbClient.INSTANCE.pushMetrics(alert);
+                    RuleHelper.publishAlert(alert);
+
+                }
+                else
+                    RuleHelper.publishStatus(rule);
+            }
+        } catch (ParseException e) {
+            throw new JobExecutionException(e);
+        } catch (InterruptedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    public Alert runRule(ScheduledRule rule, boolean dryRun) throws JobExecutionException, InterruptedException, IOException {
+        List<Metric> metrics = getMetrics(rule.getDataSerieses());
+        Set<AlertVariable> variables = rule.getVariables();
+
+        metrics.addAll(RuleHelper.resolveVariablesAndCreateMetrics(variables, metrics));
+
+        Alert alert = RuleHelper.runChecks(rule, metrics);
+        if(!dryRun && alert != null) {
+            TSDBHttpClient tsdbHttpClient = new TSDBHttpClient();
+            tsdbHttpClient.pushMetrics(metrics);
+            RuleHelper.updateCache(metrics, alert);
+        }
+        return alert;
+    }
+
+    private ScheduledRule getRule(JobDataMap jobDataMap) {
+        Long ruleId = (Long) jobDataMap.get("ruleId");
+        return ScheduledRule.getById(ScheduledRule.class, ruleId);
+    }
+
+    private synchronized List<Metric> getMetrics(Set<DataSeries> dataSeriesSet) throws JobExecutionException{
+
+        List<Metric> metrics = new ArrayList<Metric>();
+        HTTPRequest httpRequest = null;
+        AbstractHttpSourceClient sourceClient = null;
+
+        for(DataSeries seriesInfo : dataSeriesSet) {
+
+            String sourceName = seriesInfo.getSource();
+            try {
+                clientFactory().addHttpClient(sourceName);
+                sourceClient = clientFactory().getHttpClient(sourceName);
+
+                metrics.addAll(sourceClient.
+                        setQuery(seriesInfo.getQuery()).
+                        setResponseFormat("json").
+                        setQueryName(seriesInfo.getName()).
+                        execute());
+            } catch (ClassNotFoundException e) {
+                throw new JobExecutionException(e);
+            } catch (InvocationTargetException e) {
+                throw new JobExecutionException(e);
+            } catch (NoSuchMethodException e) {
+                throw new JobExecutionException(e);
+            } catch (InstantiationException e) {
+                throw new JobExecutionException(e);
+            } catch (IllegalAccessException e) {
+                throw new JobExecutionException(e);
+            } catch (ParseException e) {
+                throw new JobExecutionException(e);
+            } catch (IOException e) {
+                throw new JobExecutionException(e);
+            } catch (InterruptedException e) {
+                throw new JobExecutionException(e);
+            } finally {
+                if(httpRequest != null)
+                    httpRequest.releaseConnection();
+            }
+
+        }
+
+        return metrics;
+    }
+
+
+
+}

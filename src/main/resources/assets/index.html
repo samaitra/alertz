@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Flipkart Alerts </title>
+
+    <script src="js/jquery-1.9.0.js" type="text/javascript"> </script>
+    <script src="js/knockout-2.2.1.js" type="text/javascript"> </script>
+    <script src="js/jquery-ui.js" type="text/javascript"> </script>
+    <script src="js/jquery.sheepItPlugin-1.1.1.js" type="text/javascript"> </script>
+    <script src="bootstrap/js/bootstrap.js" type="text/javascript"> </script>
+    <script src="js/jquery.jeditable.js" type="text/javascript"> </script>
+
+
+    <script src="js/index.js" type="text/javascript"></script>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="headerPlaceHolder"></div>
+<div class="container-fluid">
+    <fieldset>
+        <legend>What is Alertz?</legend>
+        <p>This alerting platform allows users to identify breaches in various metrics(system, operation and business) across systems and escalate alerts via nagios or mail.</p>
+    </fieldset>
+    <fieldset>
+        <legend>How Does Alertz Work?</legend>
+        <img class="img-rounded offset3" src="./image/architecture.png"/>
+        <p>Alerts can be generated for breaches in trends on an archived as well as real time data.
+            Currently Alertz supports graphite and opentsdb for archived metrics but it can be easily extended
+            to support other data sources as well. Support for other data sources can be added by writing plugin clients for various metric sources.</p>
+        <p>At its core, Alertz comprises of a rule engine that lets you run checks based on the metrics fetched from a data source.</p>
+        <p>There are two kinds of rules:</p>
+        <ol>
+            <li><b>Scheduled Rules:</b> These are rules that need to be run at regular intervals on archived data. </li>
+            <li><b>OnDemand Rules:</b> These are rules that are run only when required. In this mode, the application triggers the rule by publishing real time metrics to the http end point (onDemand Rule end point) exposed by Alertz. </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Modes of Notification</legend>
+        <p>Currently, Alertz provides two kinds of notification</p>
+        <ol>
+            <li><b>Push/Subscription Model:</b> Users can subscribe to notifications from Alertz. Currently, we support email and <a href="http://nagios.org">nagios</a> (With full fledged escalation).</li>
+            <li><b>Pull Model:</b> In this model, Alertz accumulates all the notifications in memory instead of publishing it. These notifications are available for consumption from an http end point as a json.</li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Trends</legend>
+        <p>In addition to notifications from nagios and mail, you can view graphs showcasing the health of a rule over a period of time.</p>
+    </fieldset>
+    <fieldset>
+        <legend>Getting Started</legend>
+        <p>View the Run Book <a href="/getStarted.html">here</a></p>
+    </fieldset>
+</div>
+</body>
+
+</html>

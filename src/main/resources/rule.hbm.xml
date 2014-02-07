@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="flipkart.alert.domain">
+
+    <class name="flipkart.alert.domain.Rule" table="RULES"
+           catalog="fk_alert_service">
+        <cache  usage="read-write" region="name1" include="all"/>
+
+        <id name="ruleId" type="long" column="RULE_ID">
+            <generator class="native" />
+        </id>
+
+        <discriminator column="IS_SCHEDULED" type="boolean"/>
+        <property name="name" column="NAME"/>
+        <property name="team" column="TEAM"/>
+
+
+        <set name="checks" table="RULE_CHECKS" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_ID" not-null="true"/>
+            <one-to-many class="flipkart.alert.domain.RuleCheck" />
+        </set>
+
+        <set name="variables" table="ALERT_VARIABLES" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_ID" not-null="true"/>
+            <one-to-many class="flipkart.alert.domain.AlertVariable" />
+        </set>
+
+        <set name="endPoints" table="END_POINTS" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_ID" not-null="true"/>
+            <one-to-many class="flipkart.alert.domain.EndPoint" />
+        </set>
+
+        <subclass name="flipkart.alert.domain.ScheduledRule" discriminator-value="true">
+            <set name="dataSerieses" table="DATA_SERIES" lazy="false"
+                 inverse="false" fetch="select" cascade="all">
+                <key column="RULE_ID" not-null="true"/>
+                <one-to-many class="flipkart.alert.domain.DataSeries" />
+            </set>
+
+            <one-to-one name="schedule" class="flipkart.alert.domain.RuleSchedule"
+                        cascade="save-update"/>
+        </subclass>
+
+        <subclass name="flipkart.alert.domain.OnDemandRule" discriminator-value="false">
+        </subclass>
+
+
+
+
+    </class>
+</hibernate-mapping>

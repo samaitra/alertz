@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ Copyright (c) 2010, Red Hat Inc. or third-party contributors as
+  ~ indicated by the @author tags or express copyright attribution
+  ~ statements applied by the authors.  All third-party contributions are
+  ~ distributed under license by Red Hat Inc.
+  ~
+  ~ This copyrighted material is made available to anyone wishing to use, modify,
+  ~ copy, or redistribute it subject to the terms and conditions of the GNU
+  ~ Lesser General Public License, as published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  ~ or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+  ~ for more details.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public License
+  ~ along with this distribution; if not, write to:
+  ~ Free Software Foundation, Inc.
+  ~ 51 Franklin Street, Fifth Floor
+  ~ Boston, MA  02110-1301  USA
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://w3-alert-service-master.nm.flipkart.com:3306/fk_alert_service</property>
+        <property name="connection.username">alert-service-rw</property>
+        <property name="connection.password">IEnIhx78</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">50</property>
+
+        <!-- Using c3p0 DB Connection Pool Library-->
+        <property name="hibernate.c3p0.min_size">2</property>
+        <property name="hibernate.c3p0.max_size">50</property>
+        <property name="hibernate.c3p0.timeout">120</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+
+        <!-- Enable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <property name="cache.use_query_cache">true</property>
+
+        <mapping resource="alertVariable.hbm.xml" />
+        <mapping resource="endPoint.hbm.xml" />
+        <mapping resource="endPointParam.hbm.xml" />
+        <mapping resource="rule.hbm.xml" />
+        <mapping resource="ruleCheck.hbm.xml" />
+        <mapping resource="ruleSchedule.hbm.xml" />
+        <mapping resource="dataSeries.hbm.xml" />
+
+        <mapping resource="metricSource.hbm.xml" />
+        <mapping resource="sourceConnectionParam.hbm.xml" />
+        <mapping resource="ruleStat.hbm.xml" />
+        <mapping resource="checkStat.hbm.xml" />
+    </session-factory>
+
+</hibernate-configuration>

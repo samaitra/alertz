@@ -1,0 +1,54 @@
+appName: "Flipkart Alerting Service"
+
+metricSourceClients: !!map
+  GRAPHITE: "flipkart.alert.storage.GraphiteHttpClient"
+  TSDB: "flipkart.alert.storage.TsdbHttpClient"
+  CAS: "flipkart.alert.storage.health.CasHttpClient"
+
+http:
+  port: 8888
+  adminPort: 8881
+  rootPath: "/fk-alert-service/*"
+
+dispatcherConfiguration:
+  poolSize: 25
+  queueSize: 10000
+  targetConfigs: !!map
+    MAIL:
+      className: "flipkart.alert.dispatch.MailStatusDispatcher"
+      defaultParams: !!map
+        mail.smtp.host: "localhost"
+        mail.smtp.port: "25"
+        from: "alert-service@flipkart.com"
+    HTTP:
+      className: "flipkart.alert.dispatch.HttpQueueStatusDispatcher"
+      defaultParams: !!map
+        defaultQueue: "defaultQueue"
+    NAGIOS:
+      className: "flipkart.alert.dispatch.NagiosDispatcher"
+      defaultParams: !!map
+        nsca_wrapper: "/usr/lib/nagios/plugins/fk-ops-nsca-wrapper/nsca_wrapper"
+        IP: "10.65.100.85:10.65.100.86"
+        host: "fk-w3-alertservice1"
+        binary: "/usr/sbin/send_nsca"
+        config: "/etc/send_nsca.cfg"
+        nagiosHelper: "/bin/fk-alert-service/nagios_helper.sh"
+
+ruleEventsConfiguration:
+  poolSize: 15
+  queueSize: 10000
+
+dataArchivalConfiguration:
+  enabled: false
+  hosts: []
+
+graphiteConfiguration:
+  host: "flo-cache1.stage.ch.flipkart.com"
+  port: 2003
+  prefix: "alertz"
+  env: "local"
+
+logging:
+  console:
+    enabled: true
+    threshold: ALL

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="flipkart.alert.domain.EndPointParam" table="END_POINT_PARAMS">
+        <cache  usage="read-write" region="name1" include="all"/>
+        <id name="paramId" type="long" column="ID">
+            <generator class="native" />
+        </id>
+
+        <property name="name" type="java.lang.String" column="NAME"/>
+        <property name="value" type="java.lang.String" column="VALUE"/>
+
+        <many-to-one name="endPoint" column="ID" class="flipkart.alert.domain.EndPoint" fetch="select"
+                     insert="false" update="false" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PKG=fk-alert-service
+/etc/init.d/$PKG stop

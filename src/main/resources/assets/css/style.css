@@ -1,0 +1,49 @@
+@charset "UTF-8";
+input[type=text]:valid {
+    color: green;
+}
+
+hr {
+    border: none;
+    /* top    */
+    border-top: 1px solid #ccc;
+    /* middle */
+    background-color: #ddd;
+    color: #ddd;
+    /* bottom */
+    border-bottom: 1px solid #eee;
+    height: 1px;
+}
+
+.label {
+    float: left;
+    width: 30%;
+    padding-bottom: 2px;
+    height: auto;
+    font-weight: bold;
+    clear: both;
+}
+
+.text-box {
+    float: none;
+    width: auto;
+}
+
+.shortText-box {
+    width: 6em;
+}
+
+.popover-el {
+    cursor: help;
+}
+
+#loading-indicator {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+}
+
+.rule-name {
+    width: 430px;
+}
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PKG=fk-alert-service
+
+mkdir -p /var/log/flipkart/$PKG
+
+exit 0

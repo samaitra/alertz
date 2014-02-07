@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="flipkart.alert.domain.RuleStat" table="RULE_STATS">
+        <cache  usage="read-write" region="name1" include="all"/>
+
+         <id name="ruleId" type="long" column="RULE_ID">
+            <generator class="assigned" />
+        </id>
+
+        <property name="lastCheckTime" type="java.util.Date" column="LAST_CHECK_TIME"/>
+        <property name="breached" type="java.lang.Boolean" column="HAS_BREACHED"/>
+
+        <set name="checkStats" table="CHECK_STATS" lazy="false"
+             inverse="false" fetch="select" cascade="all">
+            <key column="RULE_STAT_ID" not-null="true"/>
+            <one-to-many class="flipkart.alert.domain.CheckStat" />
+        </set>
+
+    </class>
+</hibernate-mapping>

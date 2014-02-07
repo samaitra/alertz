@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="flipkart.alert.domain">
+
+    <class name="flipkart.alert.domain.RuleSchedule" table="RULE_SCHEDULE">
+        <cache  usage="read-write" region="name1" include="all"/>
+
+        <id name="ruleId" type="long">
+            <column name="RULE_ID" />
+            <generator class="foreign">
+                <param name="property">rule</param>
+            </generator>
+        </id>
+        <one-to-one name="rule" class="flipkart.alert.domain.ScheduledRule"
+                    constrained="true"></one-to-one>
+
+        <property name="interval" column="[INTERVAL]"/>
+        <property name="startDate" column="START_DATE"/>
+        <property name="endDate" column="END_DATE"/>
+        <property name="days" column="DAYS"/>
+        <property name="times" column="TIMES"/>
+        <property name="dates" column="DATES"/>
+    </class>
+
+</hibernate-mapping>

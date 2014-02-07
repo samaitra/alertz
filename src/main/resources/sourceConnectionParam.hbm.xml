@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="flipkart.alert.domain.SourceConnectionParam" table="SOURCE_CONNECTION_PARAMS"
+           catalog="fk_alert_service">
+        <cache  usage="read-write" region="name1" include="all"/>
+        <id name="paramId" type="int" column="PARAM_ID">
+            <generator class="native" />
+        </id>
+
+        <property name="param" type="java.lang.String" column="PARAM"/>
+        <property name="value" type="java.lang.String" column="VALUE"/>
+
+        <many-to-one name="source" column="SOURCE_ID" class="flipkart.alert.domain.MetricSource" fetch="select"
+                     insert="false" update="false" />
+    </class>
+</hibernate-mapping>
+

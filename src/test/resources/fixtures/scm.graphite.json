@@ -1,0 +1,14 @@
+{
+    "name": "scm.graphite",
+    "sourceType": "GRAPHITE",
+    "sourceConnectionParams": [
+        {
+            "param":"graphiteHost",
+            "value": "flo-graphite.nm.flipkart.com"
+        },
+        {
+            "param":"graphitePort",
+            "value": "80"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="flipkart.alert.domain.CheckStat" table="CHECK_STATS">
+        <cache  usage="read-write" region="name1" include="all"/>
+
+         <id name="checkId" type="long" column="CHECK_ID">
+            <generator class="assigned" />
+        </id>
+
+        <many-to-one name="ruleStat" column="RULE_STAT_ID" class="flipkart.alert.domain.RuleStat" fetch="select"
+                     insert="false" update="false" />
+
+        <property name="breached" type="java.lang.Boolean" column="HAS_BREACHED"/>
+        <property name="description" type="java.lang.String" column="DESCRIPTION"/>
+        <property name="expression" type="java.lang.String" column="BOOLEAN_EXPRESSION"/>
+    </class>
+</hibernate-mapping>

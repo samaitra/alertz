@@ -1,0 +1,57 @@
+{
+  "json" : [
+             {
+               "sourceId": 1,
+               "name": "tsdb",
+               "sourceType": "TSDB",
+               "sourceConnectionParams": [
+                 {
+                   "param": "tsdbHost",
+                   "value": "fk-alertservice-tsdb.nm.flipkart.com"
+                 },
+                 {
+                   "param": "tsdbPort",
+                   "value": "4242"
+                 }
+               ]
+             },
+             {
+               "sourceId": 2,
+               "name": "w3.tsdb",
+               "sourceType": "TSDB",
+               "sourceConnectionParams": [
+                 {
+                   "param": "tsdbHost",
+                   "value": "w3-tsdb6.nm.flipkart.com"
+                 },
+                 {
+                   "param": "tsdbPort",
+                   "value": "4242"
+                 }
+               ]
+             },
+             {
+               "sourceId": 3,
+               "name": "http1",
+               "sourceType": "HttpToFlatJson",
+               "sourceConnectionParams": [
+                 {
+                   "param": "host",
+                   "value": "localhost"
+                 },
+                 {
+                   "param": "port",
+                   "value": "4567"
+                 }
+               ]
+             }
+           ],
+  "flatJsonMap" : {
+    "Key1" : "value1",
+    "Key2" : 10,
+    "Key3" : 10.0
+  }
+}
+
+
+

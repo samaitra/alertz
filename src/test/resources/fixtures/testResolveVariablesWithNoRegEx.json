@@ -1,0 +1,35 @@
+{
+    "metrics":
+            [
+                {
+                    "key": "avg.series1",
+                    "value": 20.0
+                },
+                {
+                    "key": "h1.avg.series1",
+                    "value": 10.0
+                },
+                {
+                    "key": "h2.avg.series1",
+                    "value": 20.0
+                },
+                {
+                    "key": "h3.avg.series1",
+                    "value": 30.0
+                }
+
+            ],
+    "alertVariables": [
+    {
+      "name" : "myAvg",
+      "value" : "$avg.series1"
+    }
+    ],
+    "expectedResolvedMetrics": [
+                {
+                    "key": "myAvg",
+                    "value": 20.0
+                }
+    ]
+}
+

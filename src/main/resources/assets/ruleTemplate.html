@@ -1,0 +1,121 @@
+<!--Variables Form Begins here-->
+<div class="well" id="variablesForm">
+    <div class="row">
+        <div class="span2">
+            <p class="lead">Variables</p>
+        </div>
+        <div class="btn-group" id="variablesForm_controls">
+            <button id="variablesForm_add" class="btn" data-bind="click: addVariables"><i class="icon-plus"></i></button>
+            <button id="variablesForm_remove_last" data-bind="click: removeVariables, enable: variables().length > 1" class="btn"><i class="icon-minus"></i></button>
+        </div>
+    </div>
+    <div data-bind="foreach:variables">
+        <div class="control-group">
+            <label class="control-label">Name</label>
+            <div class="controls">
+                <input class="span8" type="text" data-bind="value: name" required>
+                <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Computed metric goes here. Provide a name for your computed metric here. Ensure name has no spaces. Subsequently the variable can be accessed as <b>$variableName</b></p>"}' data-original-title="Variable Name"><img src="image/help.png" height="20px" width="20px"></a>
+                <!--<input type="text" data-bind="value: name, event: {change: $parent.updateDropDown}, valueUpdate: 'keydown'">-->
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Value</label>
+            <div class="controls">
+                <input class="span8" type="text" data-bind="value: value" required>
+                <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p> Alert Service offers default metrices out of the box. If your alias is <b>responseTime</b> and the data query returns response times over the last 10 minutes, you can use any of these to derive your variable value</p><p>Example: $avg.responseTime/1000</p><ul><li>$min.responseTime</li><li>$max.responseTime</li><li>$first.responseTime</li><li>$last.responseTime</li><li>$stdDev.responseTime</li><li>$avg.responseTime</li><li>$median.responseTime</li><li>$sum.responseTime</li><li>$75thPercentile.responseTime</li><li>$99thPercentile.responseTime</li><li>$sum.responseTime</li><li>$count.responseTime</li></ul></p><p>Additionally, you can use another variable here.</p>"}' data-original-title="Variable Value"><img src="image/help.png" height="20px" width="20px"></a>
+            </div>
+        </div>
+
+        <hr/>
+    </div>
+</div>
+<!--Variables Form Ends here-->
+
+<!--Checks Form Begins here-->
+<div class="well" id="checksForm">
+    <div class="row">
+        <div class="span2">
+            <p class="lead">Checks</p>
+        </div>
+        <div class="btn-group" id="checksForm_controls">
+            <button id="checksForm_add" class="btn" data-bind="click: addChecks"><i class="icon-plus"></i></button>
+            <button id="checksForm_remove_last" data-bind="click: removeChecks, enable: checks().length > 1" class="btn"><i class="icon-minus"></i></button>
+        </div>
+    </div>
+    <div data-bind="foreach:checks">
+        <div class="control-group">
+            <label class="control-label">Description</label>
+            <div class="controls">
+                <input class="span10" type="text" data-bind="value: description" required>
+                <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Content here will be sent out when there is a breach.</p>"}' data-placement="left" data-original-title="Check Description"><img src="image/help.png" height="20px" width="20px"></a>
+            </div>
+
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Expression</label>
+            <div class="controls">
+                <input class="span8" type="text" data-bind="value: booleanExpression" required>
+                <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Boolean expression is entered here. Alert Service uses jexl to evaluate expressions.</p><p>Example: If the check is to ensure that response time is always under 1s, you can say $responseTime<1 (where $responseTime = $avg.responseTime/1000)"}' data-original-title="Expression"><img src="image/help.png" height="20px" width="20px"></a>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Alert Level</label>
+            <div class="controls">
+                <select type="text" data-bind="value: alertLevel"><option>0</option><option>1</option><option>2</option></select>
+                <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>0:Info</p><p>1:Warning</p><p>2:Critical</p>"}' data-original-title="Alert Level"><img src="image/help.png" height="20px" width="20px"></a>
+            </div>
+        </div>
+
+        <hr/>
+    </div>
+</div>
+<!--Checks Form Ends here-->
+
+<!--End Points form starts here-->
+<div class="well" id="endPointsForm">
+    <div class="row">
+        <div class="span2">
+            <p class="lead">Notification</p>
+        </div>
+        <div class="btn-group" id="endPointsForm_controls">
+            <button id="endPointsForm_add" class="btn" data-bind="click: addEndPoints"><i class="icon-plus"></i></button>
+            <button id="endPointsForm_remove_last" data-bind="click: removeEndPoints, enable: endPoints().length > 1" class="btn"><i class="icon-minus"></i></button>
+        </div>
+    </div>
+    <div data-bind="foreach:endPoints">
+        <div class="control-group">
+            <label class="control-label">Type</label>
+            <div class="controls">
+                <select type="text" data-bind="options: $root.endPointTypes, value: type, event:{change:changeContent}"></select>
+                <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Mode of Notification when there is a breach</p>"}' data-original-title="Notification Type"><img src="image/help.png" height="20px" width="20px"></a>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Publish With Status Too?</label>
+            <div class="controls">
+                <select type="text" data-bind="value: publishAlways"><option value="true">Yes</option><option value="false">No</option></select>
+                <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Selecting Yes wil send out a notification when there are no breaches. Setting this to Yes is mandatory when Notification Type is Nagios</p>"}' data-original-title="Publish Status"><img src="image/help.png" height="20px" width="20px"></a>
+            </div>
+        </div>
+        <!--Dirty code. Must fix later-->
+        <div data-bind="if:endPointParams().length>0">
+            <div class="control-group" data-bind="foreach:endPointParams">
+                <label class="control-label">Mail To</label>
+                <div class="controls">
+                    <input class="span8" type="text" data-bind="value: value" required>
+                    <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Mail Recepients. Recepients should be comma(,) separated.</p><p>Example: someone@flipkart.com,<br/>someone.else@flipkart.com</p>"}' data-original-title="Mail Recepients"><img src="image/help.png" height="20px" width="20px"></a>
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+</div>
+<!--End Points form ends here-->
+
+
+<!--Schedule form ends here-->
+

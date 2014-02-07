@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="flipkart.alert.domain.DataSeries" table="DATA_SERIES"
+           catalog="fk_alert_service">
+        <cache  usage="read-write" region="name1" include="all"/>
+        <id name="seriesId" type="long" column="SERIES_ID">
+            <generator class="native" />
+        </id>
+
+        <property name="name" type="java.lang.String" column="NAME"/>
+        <property name="source" type="java.lang.String" column="SOURCE"/>
+        <property name="query" type="java.lang.String" column="QUERY"/>
+
+        <many-to-one name="rule" column="RULE_ID" class="flipkart.alert.domain.Rule" fetch="select"
+                     insert="false" update="false" />
+    </class>
+</hibernate-mapping>
+

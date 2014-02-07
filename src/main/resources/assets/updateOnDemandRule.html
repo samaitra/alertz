@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Flipkart Alerts </title>
+
+    <script src="js/jquery-1.9.0.js" type="text/javascript"> </script>
+    <script src="js/knockout-2.2.1.js" type="text/javascript"> </script>
+    <script src="js/jquery-ui.js" type="text/javascript"> </script>
+    <script src="js/jquery.sheepItPlugin-1.1.1.js" type="text/javascript"> </script>
+    <script src="bootstrap/js/bootstrap.js" type="text/javascript"> </script>
+    <script src="js/jquery.jeditable.js" type="text/javascript"> </script>
+
+
+    <script src="js/utils.js" type="text/javascript"></script>
+    <script src="js/ruleHelpers.js" type="text/javascript"></script>
+    <script src="js/updateRule.js" type="text/javascript"> </script>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="headerPlaceHolder"></div>
+
+<div class="container-fluid">
+    <div class="page-header">
+        <h4>Update OnDemand Rule</h4>
+    </div>
+    <form class="form-horizontal" data-bind="with: content">
+
+        <div class="well">
+            <div class="control-group">
+                <label class="control-label">Rule Name</label>
+                <div class="controls">
+                    <input type="text" data-bind="value: name()" readonly>
+                    <a href=""><img src="image/help.png" height="20px" width="20px"></a>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Team</label>
+
+                <div class="controls">
+                    <input type="text" data-bind="value:team()" readonly>
+                    <a href=""><img src="image/help.png" height="20px" width="20px"></a>
+                </div>
+            </div>
+        </div>
+
+        <!--&lt;!&ndash;Variables Form Begins here&ndash;&gt;-->
+        <!--<div class="well" id="variablesForm">-->
+            <!--<div class="row">-->
+                <!--<div class="span2">-->
+                    <!--<p class="lead">Variables</p>-->
+                <!--</div>-->
+                <!--<div class="btn-group" id="variablesForm_controls">-->
+                    <!--<button id="variablesForm_add" class="btn" data-bind="click: addVariables"><i class="icon-plus"></i></button>-->
+                    <!--<button id="variablesForm_remove_last" data-bind="click: removeVariables, enable: variables().length > 1" class="btn"><i class="icon-minus"></i></button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div data-bind="foreach:variables">-->
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">Name</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="span8" type="text" data-bind="value: name">-->
+                        <!--&lt;!&ndash;<input type="text" data-bind="value: name, event: {change: $parent.updateDropDown}, valueUpdate: 'keydown'">&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">Value</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="span8" type="text" data-bind="value: value">-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<hr/>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;Variables Form Ends here&ndash;&gt;-->
+
+        <!--&lt;!&ndash;Checks Form Begins here&ndash;&gt;-->
+        <!--<div class="well" id="checksForm">-->
+            <!--<div class="row">-->
+                <!--<div class="span2">-->
+                    <!--<p class="lead">Checks</p>-->
+                <!--</div>-->
+                <!--<div class="btn-group" id="checksForm_controls">-->
+                    <!--<button id="checksForm_add" class="btn" data-bind="click: addChecks"><i class="icon-plus"></i></button>-->
+                    <!--<button id="checksForm_remove_last" data-bind="click: removeChecks, enable: checks().length > 1" class="btn"><i class="icon-minus"></i></button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div data-bind="foreach:checks">-->
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">Description</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="span10" type="text" data-bind="value: description">-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">Expression</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="span8" type="text" data-bind="value: booleanExpression">-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">Alert Level</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="span8" type="text" data-bind="value: alertLevel">-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<hr/>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;Checks Form Ends here&ndash;&gt;-->
+
+        <!--&lt;!&ndash;End Points form starts here&ndash;&gt;-->
+        <!--<div class="well" id="endPointsForm">-->
+            <!--<div class="row">-->
+                <!--<div class="span2">-->
+                    <!--<p class="lead">Notification</p>-->
+                <!--</div>-->
+                <!--<div class="btn-group" id="endPointsForm_controls">-->
+                    <!--<button id="endPointsForm_add" class="btn" data-bind="click: addEndPoints"><i class="icon-plus"></i></button>-->
+                    <!--<button id="endPointsForm_remove_last" data-bind="click: removeEndPoints, enable: endPoints().length > 1" class="btn"><i class="icon-minus"></i></button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div data-bind="foreach:endPoints">-->
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">Type</label>-->
+                    <!--<div class="controls">-->
+                        <!--<select type="text" data-bind="options: $root.endPointTypes, value: type, event:{change:changeContent}"></select>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="control-group">-->
+                    <!--<label class="control-label">Publish With Status Too?</label>-->
+                    <!--<div class="controls">-->
+                        <!--<input class="span8" type="text" data-bind="value: publishAlways">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash;Dirty code. Must fix later&ndash;&gt;-->
+                <!--<div data-bind="if:endPointParams().length>0">-->
+                    <!--<div class="control-group" data-bind="foreach:endPointParams">-->
+                        <!--<label class="control-label">Mail To</label>-->
+                        <!--<div class="controls">-->
+                            <!--<input class="span8" type="text" data-bind="value: value">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<hr/>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;End Points form ends here&ndash;&gt;-->
+
+        <div id="ruleTemplate"></div>
+
+
+        <div id="message"></div>
+        <button class="btn" data-bind="click:save">Update Rule</button>
+
+    </form>
+</div>
+
+
+</body>
+
+</html>

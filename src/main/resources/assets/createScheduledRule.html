@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Flipkart Alerts </title>
+
+    <script src="js/jquery-1.9.0.js" type="text/javascript"> </script>
+    <script src="js/knockout-2.2.1.js" type="text/javascript"> </script>
+    <script src="js/knockout.validation.js" type="text/javascript"> </script>
+    <script src="js/jquery-ui.js" type="text/javascript"> </script>
+    <script src="bootstrap/js/bootstrap.js" type="text/javascript"> </script>
+    <script src="js/jquery.jeditable.js" type="text/javascript"> </script>
+
+
+    <script src="js/utils.js" type="text/javascript"></script>
+    <script src="js/ruleHelpers.js" type="text/javascript"></script>
+    <script src="js/metricSources.js" type="text/javascript"></script>
+    <script src="js/createScheduledRule.js" type="text/javascript"> </script>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="headerPlaceHolder"></div>
+
+<div class="container-fluid">
+    <div class="page-header">
+        <h4>Create Scheduled Rule</h4>
+    </div>
+    <form id='myForm' class="form-horizontal" data-bind="with: content">
+
+        <div class="well">
+            <div class="control-group">
+                <label class="control-label">Rule Name</label>
+                <div class="controls">
+                    <input type="text" data-bind="value: name" required>
+                    <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Fill in the name of your rule here.<br/> Make sure there are no spaces. </p><br/><b>Valid Rule Names:</b> CreateSomeRule, myrule"}' data-original-title="Rule Name"><img src="image/help.png" height="20px" width="20px"></a>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Team</label>
+
+                <div class="controls">
+                    <input type="text" autocomplete="off" id="teams" data-provide="typeahead" data-bind="value:team" required>
+                    <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Fill in the name of your team here. If your team exists, you can pick your team from the auto suggest.<br/> If not, do ensure that there are no spaces.</p><br/><b>Valid Team Names:</b> MyTeam, Website, SupplyChain"}' data-original-title="Team Name"><img src="image/help.png" height="20px" width="20px"></a>
+                </div>
+            </div>
+        </div>
+
+        <!--Data Series Form Begins here-->
+        <div class="well" id="dataSeriesForm">
+            <div class="row">
+                <div class="span2">
+                    <p class="lead">Data Series</p>
+                </div>
+                <div class="btn-group" id="dataSeriesForm_controls">
+                    <button id="dataSeriesForm_add" class="btn" data-bind="click: addDataSeries"><i class="icon-plus"></i></button>
+                    <button id="dataSeriesForm_remove_last" data-bind="click: removeDataSeries, enable: dataSerieses().length > 1" class="btn"><i class="icon-minus"></i></button>
+                </div>
+            </div>
+            <div data-bind="foreach:dataSerieses">
+                <div class="control-group">
+                    <label class="control-label">Source</label>
+                    <div class="controls">
+                        <select type="text" data-bind="options: $root.dataSources, value: source"></select>
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>This is your data source. Select the source where you would like to fetch your data from.</p>"}' data-original-title="Data Source"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Name</label>
+                    <div class="controls">
+                        <input type="text" data-bind="value: name" required>
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>This is an alias for the query. <br/><b>Example:</b> If your query returns the response times over a span of 30 minutes, you can name it responseTime.</p>"}' data-original-title="Alias For the Data Source Query"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Query</label>
+                    <div class="controls">
+                        <input class="span10" type="text" data-bind="value: query" required>
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>The query that generates data required for running checks. </p><p> If you use Graphite, your query may look like <b style=\"word-wrap: break-word; white-space: normal;\">from=-10min&to=now&target=stats.myCounter.count</b></p> <p>Graphite Host selected depends on the <b>Source</b> selected above</p>"}' data-original-title="Data Query" data-placement="left"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+        </div>
+        <!--Data Series Form Ends here-->
+
+        <div id="ruleTemplate"></div>
+
+        <div class="well">
+            <div class="row">
+                <div class="span2">
+                    <p class="lead">Schedule</p>
+                </div>
+            </div>
+            <div data-bind="with:schedule">
+                <div class="control-group">
+                    <label class="control-label" for="startDate">Start Date</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input type="text" id="startDate" data-bind="datepicker:startDate, datepickerOptions:{dateFormat:'yy-mm-dd', onSelect: startDateFormat}, value:startDate" required>
+                            <span class="add-on"><i class="icon-calendar"></i></span>
+                        </div>
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Start Date For the Rule</p>"}' data-original-title="Start Date"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="endDate">End Date</label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input type="text" id="endDate" data-bind="datepicker:endDate, datepickerOptions:{dateFormat:'yy-mm-dd', onSelect: endDateFormat},value: endDate" required>
+                            <span class="add-on"><i class="icon-calendar"></i></span>
+                        </div>
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>End Date For the Rule</p>"}' data-original-title="End Date"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="interval">Interval</label>
+                    <div class="controls">
+                        <input type="text" id="interval" data-bind="value:interval" required>
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Example:</p><p>1s runs the rule every second</p><p>1m runs the rule every minute</p><p>1h runs the rule every hour</p><p>1d runs the rule every day</p>"}' data-original-title="Interval"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="dayToRun">Dates to Run</label>
+                    <div class="controls">
+                        <input type="text" id="dateToRun" data-bind="value: dates">
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Usage: 2012/11/11-2013/11/30,2013/12/01-2013/12/31</p>"}' data-original-title="Dates to Run"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="timeToRun">Times to Run</label>
+                    <div class="controls">
+                        <input type="text" id="timeToRun" data-bind="value:times">
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Usage: 00:00:00-11:59:59,12:00:00-23:59:59</p>"}' data-original-title="Times to Run"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="dayToRun">Days to Run</label>
+                    <div class="controls">
+                        <input type="text" id="dayToRun" data-bind="value: days">
+                        <a href="#" rel="popover" class="popover-el" data-trigger="hover" data-html="true" data-bind='bootstrapPopover: {content:"<p>Values: WEEKDAY,WEEKEND</p><p>Leave as empty if you wish to run it every day</p>"}' data-original-title="Days to Run"><img src="image/help.png" height="20px" width="20px"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Schedule form ends here-->
+        <div id="message"></div>
+        <button class="btn" type="submit" data-bind="click: save">Create Rule</button>
+
+    </form>
+</div>
+
+
+</body>
+
+</html>
