@@ -1,4 +1,4 @@
-+![Architecture](https://github.com/Flipkart/fk-alert-service/blob/master/alertz.png)
++![Architecture](https://github.com/Flipkart/fk-alertz/blob/master/alertz.png)
 <br>fl-alert-service is a light weight Quartz based Alerting Rule scheduling system which allows users to fetch metrics from data sources like Graphite, Opentsdb and run user defined rules on them for breaches.
 <br>
 <br>
