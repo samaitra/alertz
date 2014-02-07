@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="flipkart.alert.domain.EndPoint" table="END_POINTS">
+    <class name="com.flipkart.alert.domain.EndPoint" table="END_POINTS">
         <cache  usage="read-write" region="name1" include="all"/>
         <id name="endPointId" type="long" column="ID">
             <generator class="native" />
@@ -12,13 +12,13 @@
 
         <property name="publishAlways" type="java.lang.Boolean" column="PUBLISH_ALWAYS"/>
 
-        <many-to-one name="rule" column="RULE_ID" class="flipkart.alert.domain.Rule" fetch="select"
+        <many-to-one name="rule" column="RULE_ID" class="com.flipkart.alert.domain.Rule" fetch="select"
                      insert="false" update="false" />
 
         <set name="endPointParams" table="END_POINT_PARAMS" lazy="false"
              inverse="false" fetch="select" cascade="all">
             <key column="END_POINT_ID" not-null="true"/>
-            <one-to-many class="flipkart.alert.domain.EndPointParam" />
+            <one-to-many class="com.flipkart.alert.domain.EndPointParam" />
         </set>
 
     </class>

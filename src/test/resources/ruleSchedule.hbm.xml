@@ -3,9 +3,9 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="flipkart.alert.domain">
+<hibernate-mapping package="com.flipkart.alert.domain">
 
-    <class name="flipkart.alert.domain.RuleSchedule" table="RULE_SCHEDULE">
+    <class name="com.flipkart.alert.domain.RuleSchedule" table="RULE_SCHEDULE">
         <cache  usage="read-write" region="name1" include="all"/>
 
         <id name="ruleId" type="long">
@@ -14,7 +14,7 @@
                 <param name="property">rule</param>
             </generator>
         </id>
-        <one-to-one name="rule" class="flipkart.alert.domain.ScheduledRule"
+        <one-to-one name="rule" class="com.flipkart.alert.domain.ScheduledRule"
                     constrained="true"></one-to-one>
 
         <property name="interval" column="[INTERVAL]"/>

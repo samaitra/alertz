@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="flipkart.alert.domain.RuleCheck" table="RULE_CHECKS">
+    <class name="com.flipkart.alert.domain.RuleCheck" table="RULE_CHECKS">
         <cache  usage="read-write" region="name1" include="all"/>
         <id name="checkId" type="long" column="CHECK_ID">
             <generator class="native" />
@@ -12,7 +12,7 @@
         <property name="booleanExpression" type="java.lang.String" column="BOOLEAN_EXPRESSION"/>
         <property name="alertLevel" type="java.lang.String" column="ALERT_LEVEL"/>
 
-        <many-to-one name="rule" column="RULE_ID" class="flipkart.alert.domain.Rule" fetch="select"
+        <many-to-one name="rule" column="RULE_ID" class="com.flipkart.alert.domain.Rule" fetch="select"
                      insert="false" update="false" />
     </class>
 </hibernate-mapping>

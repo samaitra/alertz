@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="flipkart.alert.domain.RuleStat" table="RULE_STATS">
+    <class name="com.flipkart.alert.domain.RuleStat" table="RULE_STATS">
         <cache  usage="read-write" region="name1" include="all"/>
 
          <id name="ruleId" type="long" column="RULE_ID">
@@ -15,7 +15,7 @@
         <set name="checkStats" table="CHECK_STATS" lazy="false"
              inverse="false" fetch="select" cascade="all">
             <key column="RULE_STAT_ID" not-null="true"/>
-            <one-to-many class="flipkart.alert.domain.CheckStat" />
+            <one-to-many class="com.flipkart.alert.domain.CheckStat" />
         </set>
 
     </class>

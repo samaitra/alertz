@@ -3,9 +3,9 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="flipkart.alert.domain">
+<hibernate-mapping package="com.flipkart.alert.domain">
 
-    <class name="flipkart.alert.domain.MetricSource" table="METRIC_SOURCES"
+    <class name="com.flipkart.alert.domain.MetricSource" table="METRIC_SOURCES"
            catalog="fk_alert_service">
         <cache  usage="read-write" region="name1" include="all"/>
 
@@ -19,7 +19,7 @@
         <set name="sourceConnectionParams" table="SOURCE_CONNECTION_PARAMS" lazy="false"
              inverse="false" fetch="select" cascade="all">
             <key column="SOURCE_ID" not-null="true"/>
-            <one-to-many class="flipkart.alert.domain.SourceConnectionParam" />
+            <one-to-many class="com.flipkart.alert.domain.SourceConnectionParam" />
         </set>
 
     </class>

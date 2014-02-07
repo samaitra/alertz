@@ -245,7 +245,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>flipkart.alert.AlertService</mainClass>
+                                    <mainClass>com.flipkart.alert.AlertService</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -264,7 +264,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>flipkart.alert.AlertService</mainClass>
+                    <mainClass>com.flipkart.alert.AlertService</mainClass>
                     <arguments>
                         <argument>config/fk-alert-service.yml</argument>
                     </arguments>
@@ -278,7 +278,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>flipkart.alert.AlertService</mainClass>
+                            <mainClass>com.flipkart.alert.AlertService</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

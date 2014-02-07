@@ -1,5 +1,5 @@
 ![Architecture](https://github.com/Flipkart/fk-alertz/blob/master/alertz.png)<br>
-<br>fl-alert-service is a light weight Quartz based Alerting Rule scheduling system which allows users to fetch metrics from data sources like Graphite, Opentsdb and run user defined rules on them for breaches.
+<br>fl-alertz is a light weight Quartz based Alerting Rule scheduling system which allows users to fetch metrics from data sources like Graphite, Opentsdb and run user defined rules on them for breaches.
 <br>
 <br>
 <br>===============
@@ -58,7 +58,7 @@ Output :
        "description": null,
        "nextFireTime": "Wed Jan 16 18:45:00 IST 2013",
        "previousFireTime": "Wed Jan 16 18:44:00 IST 2013",
-       "jobClass": "flipkart.alert.schedule.job.RuleJob"
+       "jobClass": "com.flipkart.alert.schedule.job.RuleJob"
     }
 </pre>
 

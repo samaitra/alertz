@@ -3,9 +3,9 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="flipkart.alert.domain">
+<hibernate-mapping package="com.flipkart.alert.domain">
 
-    <class name="flipkart.alert.domain.Rule" table="RULES">
+    <class name="com.flipkart.alert.domain.Rule" table="RULES">
         <cache  usage="read-write" region="name1" include="all"/>
 
         <id name="ruleId" type="long" column="RULE_ID">
@@ -20,33 +20,33 @@
         <set name="checks" table="RULE_CHECKS" lazy="false"
              inverse="false" fetch="select" cascade="all">
             <key column="RULE_ID" not-null="true"/>
-            <one-to-many class="flipkart.alert.domain.RuleCheck" />
+            <one-to-many class="com.flipkart.alert.domain.RuleCheck" />
         </set>
 
         <set name="variables" table="ALERT_VARIABLES" lazy="false"
              inverse="false" fetch="select" cascade="all">
             <key column="RULE_ID" not-null="true"/>
-            <one-to-many class="flipkart.alert.domain.AlertVariable" />
+            <one-to-many class="com.flipkart.alert.domain.AlertVariable" />
         </set>
 
         <set name="endPoints" table="END_POINTS" lazy="false"
              inverse="false" fetch="select" cascade="all">
             <key column="RULE_ID" not-null="true"/>
-            <one-to-many class="flipkart.alert.domain.EndPoint" />
+            <one-to-many class="com.flipkart.alert.domain.EndPoint" />
         </set>
 
-        <subclass name="flipkart.alert.domain.ScheduledRule" discriminator-value="true">
+        <subclass name="com.flipkart.alert.domain.ScheduledRule" discriminator-value="true">
             <set name="dataSerieses" table="DATA_SERIES" lazy="false"
                  inverse="false" fetch="select" cascade="all">
                 <key column="RULE_ID" not-null="true"/>
-                <one-to-many class="flipkart.alert.domain.DataSeries" />
+                <one-to-many class="com.flipkart.alert.domain.DataSeries" />
             </set>
 
-            <one-to-one name="schedule" class="flipkart.alert.domain.RuleSchedule"
+            <one-to-one name="schedule" class="com.flipkart.alert.domain.RuleSchedule"
                         cascade="save-update"></one-to-one>
         </subclass>
 
-        <subclass name="flipkart.alert.domain.OnDemandRule" discriminator-value="false">
+        <subclass name="com.flipkart.alert.domain.OnDemandRule" discriminator-value="false">
         </subclass>
 
 
