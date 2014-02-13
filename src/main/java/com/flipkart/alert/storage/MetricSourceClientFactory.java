@@ -1,6 +1,5 @@
 package com.flipkart.alert.storage;
 
-import com.flipkart.alert.dispatch.HttpClientQueue;
 import com.flipkart.alert.domain.MetricSource;
 import com.flipkart.alert.util.ClassHelper;
 
@@ -8,6 +7,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by IntelliJ IDEA.
@@ -73,4 +75,42 @@ public class MetricSourceClientFactory {
         HttpClientQueue.add(client, metricSourceName);
     }
 
+    private static class HttpClientQueue {
+        private static int maxQueueSize;
+        private static String defaultQueueName;
+        private static Map<String,BlockingQueue<SourceClient>> queues;
+
+        static {
+            queues = new HashMap<String, BlockingQueue<SourceClient>>();
+            maxQueueSize = 50;
+            defaultQueueName = "defaultQueue";
+        }
+
+
+        public static void add(SourceClient client, String queueName) throws InterruptedException{
+            BlockingQueue<SourceClient> clientQueue = queues.get(queueName);
+            if(clientQueue == null) {
+                clientQueue = createQueue(queueName);
+            }
+            clientQueue.offer(client, 300, TimeUnit.SECONDS);
+            queues.put(queueName, clientQueue);
+        }
+
+        private static BlockingQueue<SourceClient> createQueue(String queueName) {
+            BlockingQueue<SourceClient> clientQueue;
+            clientQueue = new ArrayBlockingQueue<SourceClient>(maxQueueSize);
+            queues.put(queueName, clientQueue);
+            return clientQueue;
+        }
+
+        public static SourceClient peek(String queueName) throws InterruptedException{
+            BlockingQueue<SourceClient> queue = queues.get(queueName);
+            return queue.peek();
+        }
+
+        public static SourceClient remove(String queueName) throws InterruptedException{
+            BlockingQueue<SourceClient> queue = queues.get(queueName);
+            return queue.poll(300, TimeUnit.SECONDS);
+        }
+    }
 }
