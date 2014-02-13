@@ -74,7 +74,7 @@ public class RuleJob implements Job {
         }
     }
 
-    public Alert runRule(ScheduledRule rule) throws JobExecutionException, InterruptedException {
+    public Alert runRule(ScheduledRule rule) throws JobExecutionException, InterruptedException, IOException {
         List<Metric> metrics = getMetrics(rule.getDataSerieses());
         if(metrics.size()==0){
             RuleHelper.markRuleAsTriggered(rule);

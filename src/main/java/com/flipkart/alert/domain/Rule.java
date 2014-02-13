@@ -31,6 +31,8 @@ public class Rule extends BaseEntity{
     @Valid
     private Set<AlertVariable> variables;
 
+    private String ruleMetrics = "[]"; // json string representing list of metrics used while running the rule
+
     @Valid
     @NotEmpty
     private Set<RuleCheck> checks;
@@ -125,6 +127,14 @@ public class Rule extends BaseEntity{
     public void deleteChecks() {
         for(RuleCheck check : getChecks())
             check.delete();
+    }
+
+    public String getRuleMetrics() {
+        return ruleMetrics;
+    }
+
+    public void setRuleMetrics(String ruleMetrics) {
+        this.ruleMetrics = ruleMetrics;
     }
 
     public void deleteVariables() {

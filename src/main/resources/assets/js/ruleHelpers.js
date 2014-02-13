@@ -476,19 +476,16 @@ function getRuleForKO(ruleName) {
             checkStat.expression = statusData.expression;
             checkStat.variableUsed = null;
 
-
             if (rule.dataArchival.enabled) {
-                var allHosts = rule.dataArchival.hosts;
-                var host = allHosts[Math.floor(Math.random() * allHosts.length)];
-                var port = "4242";
+                var now = new Date();
                 $.each(rule["variables"], function(index, content) {
                     if (checkStat.expression.indexOf(content["name"]) > -1) {
                         checkStat.variableUsed = content;
-                        var today = new Date();
-                        var yesterday = new Date(today.setDate(today.getDate() - 1));
+                        var yesterday = new Date();
+                        yesterday.setDate(yesterday.getDate()-1);
 
                         checkStat.fromTimeInputValue = $.datepicker.formatDate('yy/mm/dd', yesterday) + "-00:00:00";
-                        checkStat.toTimeInputValue = $.datepicker.formatDate('yy/mm/dd', new Date()) + "-00:00:00";
+                        checkStat.toTimeInputValue = $.datepicker.formatDate('yy/mm/dd', now) + "-"+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
 
                         checkStat.updateGraph = checkStat.variableUsed.name + "_updateGraph";
 
@@ -498,11 +495,11 @@ function getRuleForKO(ruleName) {
                         }
 
                         checkStat.updateImg = function() {
-                            checkStat.img("http://" + host + ":" + port + "/q?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&m=max:" + variableKeyName + "&o=&wxh=600x300&png");
-                            checkStat.breachedImg("http://" + host + ":" + port + "/q?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&m=max:60m-sum:" + ruleName + ".breached" + "&o=&wxh=600x300&png");
+                            checkStat.img("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&o=&wxh=600x300&png");
+                            checkStat.breachedImg("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&metricType=BREACH&o=&wxh=600x300&png");
                         }
-                        checkStat.img = ko.observable("http://" + host + ":" + port + "/q?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&m=max:" + variableKeyName + "&o=&wxh=600x300&png");
-                        checkStat.breachedImg = ko.observable("http://" + host + ":" + port + "/q?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&m=max:60m-sum:" + ruleName + ".breached" + "&o=&wxh=600x300&png");
+                        checkStat.img = ko.observable("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&o=&wxh=600x300&png");
+                        checkStat.breachedImg = ko.observable("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&metricType=BREACH&o=&wxh=600x300&png");
                     }
                 });
             }
@@ -533,7 +530,7 @@ function getRuleForKO(ruleName) {
 }
 
 function getDataArchivalSource() {
-    var url = '/fk-alert-service/dataArchivalSource';
+    var url = '/fk-alert-service/configurations/metricArchiverConfiguration';
     var response;
     $.ajax({
         type: 'GET',

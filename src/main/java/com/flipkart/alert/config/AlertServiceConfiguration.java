@@ -17,7 +17,7 @@ public class AlertServiceConfiguration extends Configuration {
     private Map<String,String> metricSourceClients;
     private DispatcherConfiguration dispatcherConfiguration;
     private RuleEventsConfiguration ruleEventsConfiguration;
-    private DataArchivalConfiguration dataArchivalConfiguration;
+    private MetricArchiverConfiguration metricArchiverConfiguration;
     private GraphiteConfiguration graphiteConfiguration;
 
     public String getAppName() {
@@ -53,12 +53,12 @@ public class AlertServiceConfiguration extends Configuration {
         this.ruleEventsConfiguration = ruleEventsConfiguration;
     }
 
-    public DataArchivalConfiguration getDataArchivalConfiguration() {
-        return dataArchivalConfiguration;
+    public MetricArchiverConfiguration getMetricArchiverConfiguration() {
+        return metricArchiverConfiguration;
     }
 
-    public void setDataArchivalConfiguration(DataArchivalConfiguration dataArchivalConfiguration) {
-        this.dataArchivalConfiguration = dataArchivalConfiguration;
+    public void setMetricArchiverConfiguration(MetricArchiverConfiguration metricArchiverConfiguration) {
+        this.metricArchiverConfiguration = metricArchiverConfiguration;
     }
 
     public GraphiteConfiguration getGraphiteConfiguration() {

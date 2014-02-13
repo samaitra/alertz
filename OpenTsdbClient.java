@@ -1,18 +1,14 @@
 package com.flipkart.alert.storage;
 
 import com.yammer.dropwizard.logging.Log;
-import com.flipkart.alert.config.DataArchivalConfiguration;
 import com.flipkart.alert.domain.Metric;
 import org.jboss.netty.bootstrap.ClientBootstrap;
-import org.jboss.netty.channel.*;
 import org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory;
 import org.jboss.netty.handler.codec.string.StringEncoder;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.InetSocketAddress;
-import java.util.*;
-import java.util.concurrent.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -31,9 +27,9 @@ public enum OpenTsdbClient {
     private BlockingQueue < String > queue = new ArrayBlockingQueue<String>(10000);
     private ChannelFuture[] channelFutures;
     private final Object queueMutex = new Object();
-    private DataArchivalConfiguration dataArchival;
+    private MetricArchivalConfiguration dataArchival;
 
-    public void initialize(DataArchivalConfiguration archivalConfig) {
+    public void initialize(MetricArchivalConfiguration archivalConfig) {
         this.dataArchival = archivalConfig;
         if(dataArchival.isEnabled()){
             try {

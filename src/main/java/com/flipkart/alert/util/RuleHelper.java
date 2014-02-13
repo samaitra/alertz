@@ -1,10 +1,13 @@
 package com.flipkart.alert.util;
 
+import com.flipkart.alert.storage.archiver.MetricArchiverService;
 import com.yammer.dropwizard.logging.Log;
 import com.flipkart.alert.dispatch.StatusDispatchPipeline;
 import com.flipkart.alert.domain.*;
-import com.flipkart.alert.storage.OpenTsdbClient;
+import org.codehaus.jackson.map.ObjectMapper;
 
+import javax.ws.rs.WebApplicationException;
+import java.io.IOException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,7 +23,7 @@ public class RuleHelper {
 
     private static final Pattern PATTERN_REGEX_VARIABLE = Pattern.compile(".*\\$\\{(.+)\\}.*");
     private static Log log = Log.forClass(RuleHelper.class);
-
+    private static ObjectMapper mapper = new ObjectMapper();
     static {
         log = Log.forClass(RuleHelper.class);
     }
@@ -45,7 +48,7 @@ public class RuleHelper {
         }
     }
 
-    public static Alert runChecks(Rule rule, List<Metric> metrics, Set<MetricTag> tags) {
+    public static Alert runChecks(Rule rule, List<Metric> metrics, Set<MetricTag> tags) throws IOException {
         Set<CheckStat> checkStats = new HashSet<CheckStat>();
         List<RuleCheck> breachedChecks = new ArrayList<RuleCheck>();
         List<Metric> metricsUsed = new ArrayList<Metric>();
@@ -163,7 +166,13 @@ public class RuleHelper {
         ruleStatistic.setCheckStats(checkStats);
         ruleStatistic.create();
         metricsUsed.add(ruleBreachMetric);
-        OpenTsdbClient.INSTANCE.pushMetrics(metricsUsed, rule.getName());
+        updateRuleMetrics(rule,metricsUsed);
+
+        /**
+         * Publish metrics
+         */
+//        OpenTsdbClient.INSTANCE.pushMetrics(metricsUsed, rule.getName());
+        MetricArchiverService.archive(rule.getName(), metricsUsed);
 
         if (breachedChecks.size() != 0 ) {
             log.info("Rule: " + rule.getName() + " with metrics " + metrics + "\nStatus: Breached");
@@ -172,6 +181,14 @@ public class RuleHelper {
 
         log.info("Rule: " + rule.getName() + " with metrics " + metrics + "\nStatus: OK");
         return null;
+    }
+
+    private static void updateRuleMetrics(Rule rule, List<Metric> metricsUsed) throws IOException {
+        List<String> ruleMetrics = new ArrayList<String>();
+        for(Metric metric : metricsUsed)
+            ruleMetrics.add(rule.getName()+"."+metric.getKey());
+        rule.setRuleMetrics(mapper.writeValueAsString(ruleMetrics));
+        rule.update();
     }
 
     public static void markRuleAsTriggered(ScheduledRule rule) {

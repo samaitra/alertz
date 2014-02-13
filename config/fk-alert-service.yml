@@ -39,8 +39,11 @@ ruleEventsConfiguration:
   poolSize: 15
   queueSize: 10000
 
-dataArchivalConfiguration:
+metricArchiverConfiguration:
   enabled: true
+  archivalClass: com.flipkart.alert.storage.archiver.RRD4JFileMetricArchiver
+  params:
+
   hosts:
     - "fk-alertservice-tsdb.nm.flipkart.com"
 
@@ -48,9 +51,8 @@ dataArchivalConfiguration:
 metricArchiverConfiguration:
   enabled: true
   metricArchiverClass:TSDBArchiver
-  params:
-    hosts:
-      - "fk-alertservice-tsdb.nm.flipkart.com"
+  params: !!map
+    basePath: "./"
 
 graphiteConfiguration:
   host: "flo-graphite.nm.flipkart.com"

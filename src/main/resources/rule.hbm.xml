@@ -16,7 +16,7 @@
         <discriminator column="IS_SCHEDULED" type="boolean"/>
         <property name="name" column="NAME"/>
         <property name="team" column="TEAM"/>
-
+        <property name="ruleMetrics" column="RULE_METRICS"/>
 
         <set name="checks" table="RULE_CHECKS" lazy="false"
              inverse="false" fetch="select" cascade="all">

@@ -3,12 +3,11 @@ package com.flipkart.alert.integration;
 import com.flipkart.alert.config.AlertServiceConfiguration;
 import com.flipkart.alert.dispatch.StatusDispatchPipeline;
 import com.flipkart.alert.domain.MetricSource;
-import com.flipkart.alert.resource.DataArchivalResource;
 import com.flipkart.alert.resource.HttpAlertQueueResource;
 import com.flipkart.alert.resource.ScheduledRuleResource;
 import com.flipkart.alert.storage.MetricSourceClientFactory;
-import com.flipkart.alert.storage.OpenTsdbClient;
 import com.flipkart.alert.storage.RuleEventsFactory;
+import com.flipkart.alert.storage.archiver.MetricArchiverService;
 import com.flipkart.alert.testHelper.HttpAlertQueueClient;
 import com.flipkart.alert.testHelper.ScheduledRuleResourceClient;
 import com.flipkart.alert.testHelper.TestNGResourceTest;
@@ -51,14 +50,11 @@ public class BaseIntegrationTest extends TestNGResourceTest {
 
         addResource(new HttpAlertQueueResource());
         addResource(new ScheduledRuleResource());
-        addResource(new DataArchivalResource(configuration.getDataArchivalConfiguration()));
 
         RuleEventsFactory.buildFactory(configuration.getruleEventsConfiguration());
 
         StatusDispatchPipeline.buildPipeline(configuration.getDispatcherConfiguration());
-        OpenTsdbClient.INSTANCE.initialize(configuration.getDataArchivalConfiguration());
-
-
+        MetricArchiverService.initialize(configuration.getMetricArchiverConfiguration());
     }
 
     @BeforeClass

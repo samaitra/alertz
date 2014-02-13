@@ -2,6 +2,7 @@ package com.flipkart.alert.util;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Created by IntelliJ IDEA.
@@ -19,4 +20,13 @@ public class ClassHelper {
         Constructor<T> constructor = type.getConstructor(paramTypes);
         return constructor.newInstance(params);
     }
+
+    public static Method getMethod(String className, String functionName, Class[] paramTypes) throws ClassNotFoundException, SecurityException, NoSuchMethodException {
+        Method method   =   null;
+        Class actionClassObj;
+        actionClassObj      =   Class.forName(className);
+        method              =   actionClassObj.getMethod(functionName, paramTypes);
+        return method;
+    }
+
 }

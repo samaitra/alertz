@@ -6,9 +6,11 @@ metricSourceClients: !!map
   CAS: "com.flipkart.alert.storage.health.CasHttpClient"
   HttpToFlatJson: "com.flipkart.alert.storage.HttpToFlatJsonClient"
 
-dataArchivalConfiguration:
-  enabled: false
-  hosts: []
+metricArchiverConfiguration:
+  enabled: true
+  metricArchiverClass:TSDBArchiver
+  params: !!map
+    basePath: "./"
 
 dispatcherConfiguration:
   poolSize: 25

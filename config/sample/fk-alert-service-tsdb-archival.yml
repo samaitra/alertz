@@ -40,9 +40,10 @@ ruleEventsConfiguration:
 
 metricArchiverConfiguration:
   enabled: true
-  metricArchiverClass: "com.flipkart.alert.storage.archiver.RRD4JFileMetricArchiver"
+  metricArchiverClass: "com.flipkart.alert.storage.archiver.TSDBMetricArchiver"
   params: !!map
-    basePath: "./"
+    hosts:
+      - "fk-alertservice-tsdb.nm.flipkart.com"
 
 graphiteConfiguration:
   host: "flo-cache1.stage.ch.flipkart.com"
