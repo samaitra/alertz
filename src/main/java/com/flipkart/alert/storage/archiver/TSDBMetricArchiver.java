@@ -30,7 +30,7 @@ public class TSDBMetricArchiver extends MetricArchiver{
 
     private List <String> hosts;
     private final Integer defaultPort = 4242;
-    private BlockingQueue < String > queue = new ArrayBlockingQueue<String>(10000);
+    private BlockingQueue <String> queue = new ArrayBlockingQueue<String>(10000);
     private ChannelFuture[] channelFutures;
     private final Object queueMutex = new Object();
 

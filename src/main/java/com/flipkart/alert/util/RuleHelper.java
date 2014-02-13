@@ -2,7 +2,6 @@ package com.flipkart.alert.util;
 
 import com.flipkart.alert.storage.archiver.MetricArchiverService;
 import com.yammer.dropwizard.logging.Log;
-import com.flipkart.alert.dispatch.StatusDispatchPipeline;
 import com.flipkart.alert.domain.*;
 import org.codehaus.jackson.map.ObjectMapper;
 
@@ -26,26 +25,6 @@ public class RuleHelper {
     private static ObjectMapper mapper = new ObjectMapper();
     static {
         log = Log.forClass(RuleHelper.class);
-    }
-
-    public static void publishAlert(Alert alert) throws Exception {
-        try {
-            if(!alert.getRule().getEndPoints().isEmpty()) {
-                StatusDispatchPipeline.publishToQueue(alert, alert.getRule().getEndPoints());
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void publishStatus(Rule rule) throws Exception {
-        try {
-            if(!rule.getEndPoints().isEmpty()) {
-                StatusDispatchPipeline.publishToQueue(rule, rule.getEndPoints());
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public static Alert runChecks(Rule rule, List<Metric> metrics, Set<MetricTag> tags) throws IOException {
@@ -167,11 +146,6 @@ public class RuleHelper {
         ruleStatistic.create();
         metricsUsed.add(ruleBreachMetric);
         updateRuleMetrics(rule,metricsUsed);
-
-        /**
-         * Publish metrics
-         */
-//        OpenTsdbClient.INSTANCE.pushMetrics(metricsUsed, rule.getName());
         MetricArchiverService.archive(rule.getName(), metricsUsed);
 
         if (breachedChecks.size() != 0 ) {

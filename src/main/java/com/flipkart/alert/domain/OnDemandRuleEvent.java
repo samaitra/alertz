@@ -1,5 +1,6 @@
 package com.flipkart.alert.domain;
 
+import com.flipkart.alert.dispatch.StatusDispatchService;
 import com.yammer.dropwizard.logging.Log;
 import com.flipkart.alert.util.MetricHelper;
 import com.flipkart.alert.util.RuleHelper;
@@ -61,14 +62,7 @@ public class OnDemandRuleEvent {
         Set<MetricTag> tags = MetricHelper.fetchOnDemandRuleTags(rule.getTeam(), this);
 
         Alert alert = RuleHelper.runChecks(rule, metrics, tags);
-        if(alert != null) {
-            log.info("Rule: " + rule.getName() + " with metrics " + metrics + "\nStatus: Triggered for checks " + alert.getBreachedChecks());
-            RuleHelper.publishAlert(alert);
-        }
-        else {
-            log.info("Rule: " + rule.getName() + " with metrics " + metrics + "\nStatus: OK");
-            RuleHelper.publishStatus(rule);
-        }
+        StatusDispatchService.dispatch(rule, alert);
     }
 
     private List<Metric> buildMetricsFromDataMap(Map<String, Long> data) {

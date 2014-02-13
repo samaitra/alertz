@@ -2,35 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dfae935-b023-4b8b-adbf-5a054bb7a354" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rrd4j_rrd4j_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiverService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/RRD4JFileMetricArchiver.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/DataArchivalConfiguration.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/DataArchivalResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/ConfigurationResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/OpenTsdbClient.java" afterPath="$PROJECT_DIR$/OpenTsdbClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatchService.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatchPipeline.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatchQueue.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatcherThread.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/DispatcherConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusDispatcherServiceConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusDispatcherConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/AlertServiceConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/AlertServiceConfiguration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/ClassHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/ClassHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiver.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/Rule.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/Rule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/OnDemandRuleEvent.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/OnDemandRuleEvent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/RuleHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/RuleHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/schedule/job/RuleJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/schedule/job/RuleJob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/TSDBMetricArchiver.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/TSDBMetricArchiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/create_tables.sql" afterPath="$PROJECT_DIR$/db/create_tables.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/fk-alert-service-dev.yml" afterPath="$PROJECT_DIR$/config/fk-alert-service-dev.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml" afterPath="$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/fk-alert-service-test.yml" afterPath="$PROJECT_DIR$/config/fk-alert-service-test.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml" afterPath="$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/fk-alert-service.yml" afterPath="$PROJECT_DIR$/config/fk-alert-service.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fk-alertz.iml" afterPath="$PROJECT_DIR$/fk-alertz.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rule.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/rule.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/ruleHelpers.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/ruleHelpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fk-alertz.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392277872842" ignored="false" />
+    <file path="/Dummy.txt" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392281862996" ignored="false" />
     <file path="/fragment.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392278545143" ignored="false" />
     <file path="/README.md" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1391763515461" ignored="false" />
     <file path="/create_tables.sql" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1391765308967" ignored="false" />
@@ -43,7 +37,7 @@
     <file path="$PROJECT_DIR$/../JMetrics/src/main/java/nitinka/jmetrics/archive/RRD4JArchivingEngine.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392110469999" ignored="false" />
     <file path="/RRD4JArchivingEngine.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392110442038" ignored="false" />
     <file path="/RRD4JFileMetricArchiver.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392277300702" ignored="false" />
-    <file path="/fk-alert-service.yml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392194119030" ignored="false" />
+    <file path="/fk-alert-service.yml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392286667482" ignored="false" />
     <file path="/DataArchivalConfiguration.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392194212535" ignored="false" />
     <file path="/AlertService.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392278336621" ignored="false" />
     <file path="/AlertServiceConfiguration.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392194692733" ignored="false" />
@@ -53,6 +47,11 @@
     <file path="/ruleHelpers.js" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392203417821" ignored="false" />
     <file path="/MetricArchiverResource.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392202165466" ignored="false" />
     <file path="/ConfigurationResource.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392278998746" ignored="false" />
+    <file path="/RuleJob.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392286478704" ignored="false" />
+    <file path="/StatusDispatchService.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392289851489" ignored="false" />
+    <file path="/BaseIntegrationTest.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392289910529" ignored="false" />
+    <file path="/OnDemandRuleEvent.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392289953708" ignored="false" />
+    <file path="/fk-alert-service-test.yml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392290277686" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,88 +126,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MetricArchiverResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/MetricArchiverResource.java">
+      <file leaf-file-name="StatusDispatchService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatchService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="68" selection-start="2562" selection-end="2562" vertical-scroll-proportion="-0.6">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fk-alert-service-dev.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/fk-alert-service-dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RRD4JFileMetricArchiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/RRD4JFileMetricArchiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="17" column="19" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#6522#6552#0" expanded="true" />
-                <element signature="e#7038#7054#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2513#2529#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fk-alert-service.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/fk-alert-service.yml">
+      <file leaf-file-name="AlertService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TSDBMetricArchiver.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/TSDBMetricArchiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="79" selection-start="5310" selection-end="5310" vertical-scroll-proportion="0.29515418">
-              <folding>
-                <element signature="e#1100#1108#0" expanded="true" />
-                <element signature="e#5041#5071#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fk-alert-service-tsdb-archival.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fk-alert-service-rrd4j-fs-archival.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/DateHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="25" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MetricArchiverService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiverService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="35" selection-start="1269" selection-end="1277" vertical-scroll-proportion="0.0">
+            <state line="54" column="17" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,6 +153,69 @@
         <entry file="file://$PROJECT_DIR$/config/fk-alert-service-test.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fk-alert-service.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/fk-alert-service.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="36" selection-start="411" selection-end="411" vertical-scroll-proportion="0.2863436">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlertServiceConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/AlertServiceConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="37" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fk-alert-service-dev.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/fk-alert-service-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="36" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="9" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatusDispatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="25" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpClientQueue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/HttpClientQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="24" selection-start="405" selection-end="420" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpAlertQueue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/HttpAlertQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="22" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -243,22 +239,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/OpenTsdbClient.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/JMetricController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/RuleHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiverService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/RRD4JFileMetricArchiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/ClassHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/ConfigurationResource.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/assets/js/ruleHelpers.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/MetricAccessResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/MetricArchiverResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/schedule/job/RuleJob.java" />
         <option value="$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml" />
+        <option value="$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusDispatcherConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusDispatcherConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/OnDemandRuleEvent.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/RuleHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatcherThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java" />
+        <option value="$PROJECT_DIR$/config/fk-alert-service-test.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/AlertServiceConfiguration.java" />
         <option value="$PROJECT_DIR$/config/fk-alert-service-dev.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/TSDBMetricArchiver.java" />
+        <option value="$PROJECT_DIR$/config/fk-alert-service.yml" />
       </list>
     </option>
   </component>
@@ -475,7 +471,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
+              <option name="myItemId" value="schedule" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -505,41 +501,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="archiver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
+              <option name="myItemId" value="dispatch" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,6 +564,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -819,7 +799,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42857143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5673077" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75" sideWeight="0.29926026" order="7" side_tool="true" content_ui="tabs" />
@@ -831,7 +811,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3698722" sideWeight="0.50961536" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29186282" sideWeight="0.5714286" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4903846" sideWeight="0.6960323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -899,46 +879,107 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/yammer/metrics/metrics-jersey/2.1.3/metrics-jersey-2.1.3.jar!/com/yammer/metrics/jersey/InstrumentedResourceMethodDispatchProvider.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/HttpQueueStatusDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="20" selection-start="2416" selection-end="2416" vertical-scroll-proportion="-4.4">
+        <state line="16" column="13" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/yammer/dropwizard/dropwizard-core/0.5.1/dropwizard-core-0.5.1.jar!/com/yammer/dropwizard/config/Configuration.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusDispatcherConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="171" selection-end="171" vertical-scroll-proportion="-3.0">
+        <state line="11" column="13" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/AlertServiceConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusDispatcherServiceConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="57" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+        <state line="13" column="31" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/ConfigurationResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/DispatcherContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="63" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
+        <state line="29" column="0" selection-start="373" selection-end="871" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/OnDemandRuleEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2063" selection-end="2063" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/RuleHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#updateRuleMetrics#0;class#RuleHelper#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="9" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2513#2529#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="25" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/HttpClientQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="24" selection-start="405" selection-end="420" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/HttpAlertQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="22" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="17" selection-start="2364" selection-end="2364" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/ruleHelpers.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/AlertServiceConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="532" column="75" selection-start="18116" selection-end="18116" vertical-scroll-proportion="0.0">
+        <state line="39" column="37" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiver.java">
+    <entry file="file://$PROJECT_DIR$/config/fk-alert-service-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="583" selection-end="583" vertical-scroll-proportion="0.0">
+        <state line="12" column="36" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -952,72 +993,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/fk-alert-service.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+        <state line="13" column="36" selection-start="411" selection-end="411" vertical-scroll-proportion="0.2863436">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/RRD4JFileMetricArchiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6522#6552#0" expanded="true" />
-            <element signature="e#7038#7054#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/MetricArchiverService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="35" selection-start="1269" selection-end="1277" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/MetricArchiverResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="68" selection-start="2562" selection-end="2562" vertical-scroll-proportion="-0.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/DateHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="25" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/fk-alert-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/TSDBMetricArchiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="79" selection-start="5310" selection-end="5310" vertical-scroll-proportion="0.29515418">
-          <folding>
-            <element signature="e#1100#1108#0" expanded="true" />
-            <element signature="e#5041#5071#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

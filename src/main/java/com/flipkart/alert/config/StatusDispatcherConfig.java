@@ -9,7 +9,7 @@ import java.util.Map;
  * Time: 12:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class StatusConfig {
+public class StatusDispatcherConfig {
     private String className;
     private Map<String,Object> defaultParams;
 

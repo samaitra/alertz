@@ -10,7 +10,7 @@ http:
   adminPort: 8881
   rootPath: "/fk-alert-service/*"
 
-dispatcherConfiguration:
+statusDispatcherServiceConfiguration:
   poolSize: 25
   queueSize: 10000
   targetConfigs: !!map

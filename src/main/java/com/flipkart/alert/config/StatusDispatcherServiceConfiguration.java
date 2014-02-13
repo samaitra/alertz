@@ -9,9 +9,9 @@ import java.util.HashMap;
  * Time: 12:04 PM
  * To change this template use File | Settings | File Templates.
  */
-public class DispatcherConfiguration {
+public class StatusDispatcherServiceConfiguration {
     private int queueSize;
-    private HashMap<String, StatusConfig> targetConfigs;
+    private HashMap<String, StatusDispatcherConfig> targetConfigs;
     private int poolSize;
 
     public int getQueueSize() {
@@ -22,11 +22,11 @@ public class DispatcherConfiguration {
         this.queueSize = queueSize;
     }
 
-    public HashMap<String, StatusConfig> getTargetConfigs() {
+    public HashMap<String, StatusDispatcherConfig> getTargetConfigs() {
         return targetConfigs;
     }
 
-    public void setTargetConfigs(HashMap<String, StatusConfig> targetConfigs) {
+    public void setTargetConfigs(HashMap<String, StatusDispatcherConfig> targetConfigs) {
         System.out.println("Target configs: " + targetConfigs.toString());
         this.targetConfigs = targetConfigs;
     }

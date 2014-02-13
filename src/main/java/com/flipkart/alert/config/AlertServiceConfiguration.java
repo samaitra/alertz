@@ -15,7 +15,7 @@ import java.util.Map;
 public class AlertServiceConfiguration extends Configuration {
     private String appName;
     private Map<String,String> metricSourceClients;
-    private DispatcherConfiguration dispatcherConfiguration;
+    private StatusDispatcherServiceConfiguration statusDispatcherServiceConfiguration;
     private RuleEventsConfiguration ruleEventsConfiguration;
     private MetricArchiverConfiguration metricArchiverConfiguration;
     private GraphiteConfiguration graphiteConfiguration;
@@ -36,12 +36,12 @@ public class AlertServiceConfiguration extends Configuration {
         this.metricSourceClients = metricSourceClients;
     }
 
-    public DispatcherConfiguration getDispatcherConfiguration() {
-        return dispatcherConfiguration;
+    public StatusDispatcherServiceConfiguration getStatusDispatcherServiceConfiguration() {
+        return statusDispatcherServiceConfiguration;
     }
 
-    public void setDispatcherConfiguration(DispatcherConfiguration configuration) {
-        this.dispatcherConfiguration = configuration;
+    public void setStatusDispatcherServiceConfiguration(StatusDispatcherServiceConfiguration configuration) {
+        this.statusDispatcherServiceConfiguration = configuration;
     }
 
 

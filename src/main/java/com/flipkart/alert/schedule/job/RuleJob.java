@@ -1,5 +1,7 @@
 package com.flipkart.alert.schedule.job;
 
+import com.flipkart.alert.dispatch.StatusDispatchService;
+import com.flipkart.alert.dispatch.StatusDispatcher;
 import com.flipkart.http.HTTPRequest;
 import com.yammer.dropwizard.logging.Log;
 import com.flipkart.alert.domain.*;
@@ -40,11 +42,7 @@ public class RuleJob implements Job {
                 jobStarted(rule.getName());
                 if(rule.canRunNow()) {
                     Alert alert = runRule(rule);
-                    if(alert != null) {
-                        RuleHelper.publishAlert(alert);
-                    }
-                    else
-                        RuleHelper.publishStatus(rule);
+                    StatusDispatchService.dispatch(rule, alert);
                 }
             } catch (ParseException e) {
                 throw new JobExecutionException(e);

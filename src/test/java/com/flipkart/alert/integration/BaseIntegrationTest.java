@@ -1,7 +1,7 @@
 package com.flipkart.alert.integration;
 
 import com.flipkart.alert.config.AlertServiceConfiguration;
-import com.flipkart.alert.dispatch.StatusDispatchPipeline;
+import com.flipkart.alert.dispatch.StatusDispatchService;
 import com.flipkart.alert.domain.MetricSource;
 import com.flipkart.alert.resource.HttpAlertQueueResource;
 import com.flipkart.alert.resource.ScheduledRuleResource;
@@ -53,7 +53,7 @@ public class BaseIntegrationTest extends TestNGResourceTest {
 
         RuleEventsFactory.buildFactory(configuration.getruleEventsConfiguration());
 
-        StatusDispatchPipeline.buildPipeline(configuration.getDispatcherConfiguration());
+        StatusDispatchService.initialize(configuration.getStatusDispatcherServiceConfiguration());
         MetricArchiverService.initialize(configuration.getMetricArchiverConfiguration());
     }
 
