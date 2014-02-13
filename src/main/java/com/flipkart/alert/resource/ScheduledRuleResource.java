@@ -1,6 +1,7 @@
 
 package com.flipkart.alert.resource;
 
+import com.flipkart.alert.schedule.RuleJob;
 import com.yammer.dropwizard.logging.Log;
 import com.yammer.metrics.annotation.Timed;
 import com.flipkart.alert.domain.Alert;
@@ -8,8 +9,7 @@ import com.flipkart.alert.domain.Rule;
 import com.flipkart.alert.domain.RuleStat;
 import com.flipkart.alert.domain.ScheduledRule;
 import com.flipkart.alert.schedule.Scheduler;
-import com.flipkart.alert.schedule.job.JobAlreadyExistsException;
-import com.flipkart.alert.schedule.job.RuleJob;
+import com.flipkart.alert.exception.JobAlreadyExistsException;
 import com.flipkart.alert.util.NumberHelper;
 import com.flipkart.alert.util.ResponseBuilder;
 import org.quartz.JobDetail;

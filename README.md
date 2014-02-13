@@ -58,7 +58,7 @@ Output :
        "description": null,
        "nextFireTime": "Wed Jan 16 18:45:00 IST 2013",
        "previousFireTime": "Wed Jan 16 18:44:00 IST 2013",
-       "jobClass": "com.flipkart.alert.schedule.job.RuleJob"
+       "jobClass": "com.flipkart.alert.schedule.RuleJob"
     }
 </pre>
 

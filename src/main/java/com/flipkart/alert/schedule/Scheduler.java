@@ -3,7 +3,7 @@ package com.flipkart.alert.schedule;
 import com.yammer.dropwizard.logging.Log;
 import com.flipkart.alert.domain.*;
 import com.flipkart.alert.util.DateHelper;
-import com.flipkart.alert.schedule.job.JobAlreadyExistsException;
+import com.flipkart.alert.exception.JobAlreadyExistsException;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.quartz.impl.matchers.GroupMatcher;

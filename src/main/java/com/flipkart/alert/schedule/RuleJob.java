@@ -1,7 +1,6 @@
-package com.flipkart.alert.schedule.job;
+package com.flipkart.alert.schedule;
 
 import com.flipkart.alert.dispatch.StatusDispatchService;
-import com.flipkart.alert.dispatch.StatusDispatcher;
 import com.flipkart.http.HTTPRequest;
 import com.yammer.dropwizard.logging.Log;
 import com.flipkart.alert.domain.*;

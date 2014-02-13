@@ -1,4 +1,4 @@
-package com.flipkart.alert.schedule.job;
+package com.flipkart.alert.exception;
 
 import org.quartz.JobKey;
 
