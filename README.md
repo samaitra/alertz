@@ -20,5 +20,6 @@
 <br>1) Go to http://localhost:8888/getStarted.html, This page will help you create rules.<br>
 But before you create the rules, you need to provide some connection information about your data source (graphite/ tsdb) which you will use in your rule to pull data).
 <pre>
+Do Http POST on http://localhost:8888/alertz/metricSources
 {"name":"flo.graphite","sourceType":"GRAPHITE","sourceConnectionParams":[{"param":"graphitePort","value":"80"},{"param":"graphiteHost","value":"Graphite Host Name"}]}
 </pre>
