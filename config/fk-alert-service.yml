@@ -41,16 +41,7 @@ ruleEventsConfiguration:
 
 metricArchiverConfiguration:
   enabled: true
-  archivalClass: com.flipkart.alert.storage.archiver.RRD4JFileMetricArchiver
-  params:
-
-  hosts:
-    - "fk-alertservice-tsdb.nm.flipkart.com"
-
-
-metricArchiverConfiguration:
-  enabled: true
-  metricArchiverClass:TSDBArchiver
+  metricArchiverClass:"com.flipkart.alert.storage.archiver.RRD4JFileMetricArchiver"
   params: !!map
     basePath: "./"
 
