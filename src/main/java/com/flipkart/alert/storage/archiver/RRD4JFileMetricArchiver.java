@@ -2,7 +2,9 @@ package com.flipkart.alert.storage.archiver;
 
 import com.flipkart.alert.domain.Metric;
 import com.yammer.dropwizard.logging.Log;
+import com.yammer.metrics.core.Clock;
 import org.apache.commons.lang.RandomStringUtils;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.rrd4j.ConsolFun;
 import org.rrd4j.DsType;
 import org.rrd4j.core.*;
@@ -58,8 +60,7 @@ public class RRD4JFileMetricArchiver extends MetricArchiver{
                 DsDef dsDef = new DsDef(newDataSourceNameForMetric, DsType.GAUGE, 600, Double.NaN, Double.NaN);
                 RrdDef rrdDef = new RrdDef(metricRRDFilePath);
                 rrdDef.addDatasource(dsDef);
-                rrdDef.setStartTime((int)((metric.getCreationTime().getTime()) /1000));
-
+                rrdDef.setStartTime((int) ((metric.getCreationTime().getTime()) / 1000));
                     /*
                     Following Archives should be based on Metric Data Type. Keeping it as is for the time being
                      */
@@ -84,10 +85,17 @@ public class RRD4JFileMetricArchiver extends MetricArchiver{
                 metricRddDBMap.put(metricName, rrdDb);
                 metricPathMap.put(metricName, metricRRDFilePath);
                 metricDataSourceMap.put(metricName, newDataSourceNameForMetric);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+                metric.setCreationTime(new Date());
             }
 
             RrdDb rrdDb = new RrdDb(metricPathMap.get(metricName));
             Sample sample = rrdDb.createSample();
+            logger.info("Archiving :"+new ObjectMapper().writeValueAsString(metric));
             sample.setAndUpdate((int)(metric.getCreationTime().getTime()/1000) + ":" +metric.getValue());
             rrdDb.close();
         }

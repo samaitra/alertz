@@ -6,7 +6,7 @@
 <br>===============
 <br><b>Scheduling Rule</b>
 <br>===============<br>
-To mine metrics from Metric collection system like Opentsdb or graphite you have to create jobs in fk-alert-system.<br>Http Operation to do the same :<br>
+To mine metrics from Metric collection system like Opentsdb or graphite you have to create jobs in alertz.<br>Http Operation to do the same :<br>
 HTTP POST on http://localhost:8080/alertz/scheduledRules with following request body :<br>
 <pre>
      {
@@ -395,7 +395,7 @@ Output
 <br>=================
 <br>1) <b>Environment</b> :Make sure you have sun-java6, maven installed
 <br>2) <b>Clone alertz</b> : git@github.com:Flipkart/alertz.git
-<br>3) <b>create database 'fk_alert_service'</b> ./db/recreate_db.sh fk_alert_service
+<br>3) <b>create database 'alertz'</b> ./db/recreate_db.sh alertz
 <br>4) Change DB username and password if required in src/main/resources/quartz.properties and src/main/resources/hibernate.cfg.xml
 <br>5) <b>Build project assembly</b> : mvn clean compile assembly:assembly
 <br>6) <b>Start Service</b>  :java -jar target/alertz-1.0-SNAPSHOT-jar-with-dependencies.jar

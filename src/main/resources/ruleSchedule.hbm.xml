@@ -5,8 +5,7 @@
 
 <hibernate-mapping package="com.flipkart.alert.domain">
 
-    <class name="com.flipkart.alert.domain.RuleSchedule" table="RULE_SCHEDULE"
-           catalog="fk_alert_service">
+    <class name="com.flipkart.alert.domain.RuleSchedule" table="RULE_SCHEDULE">
         <cache  usage="read-write" region="name1" include="all"/>
 
         <id name="ruleId" type="long">

@@ -26,7 +26,7 @@ public class AlertService extends Service<AlertServiceConfiguration> {
     private static AlertServiceConfiguration configuration;
 
     private AlertService() {
-        super("alert-service");
+        super("Alertz");
         addBundle(new AssetsBundle("/assets", "/"));
     }
 
