@@ -45,7 +45,7 @@ public class AlertServiceConfiguration extends Configuration {
     }
 
 
-    public RuleEventsConfiguration getruleEventsConfiguration() {
+    public RuleEventsConfiguration getRuleEventsConfiguration() {
         return ruleEventsConfiguration;
     }
 

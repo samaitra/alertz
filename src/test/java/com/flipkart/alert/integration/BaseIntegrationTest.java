@@ -51,7 +51,7 @@ public class BaseIntegrationTest extends TestNGResourceTest {
         addResource(new HttpAlertQueueResource());
         addResource(new ScheduledRuleResource());
 
-        RuleEventsFactory.buildFactory(configuration.getruleEventsConfiguration());
+        RuleEventsFactory.buildFactory(configuration.getRuleEventsConfiguration());
 
         StatusDispatchService.initialize(configuration.getStatusDispatcherServiceConfiguration());
         MetricArchiverService.initialize(configuration.getMetricArchiverConfiguration());

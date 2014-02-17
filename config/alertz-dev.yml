@@ -3,7 +3,7 @@ appName: "Alerting Service"
 metricSourceClients: !!map
   GRAPHITE: "com.flipkart.alert.storage.GraphiteHttpClient"
   TSDB: "com.flipkart.alert.storage.TsdbHttpClient"
-  CAS: "com.flipkart.alert.storage.health.CasHttpClient"
+  HttpToFlatJson: "com.flipkart.alert.storage.HttpToFlatJsonClient"
 
 http:
   port: 8888
@@ -45,3 +45,11 @@ logging:
   console:
     enabled: true
     threshold: ALL
+  file:
+    enabled: false
+    threshold: ALL
+    timeZone: IST
+    logFormat: "%highlight(%-5level) [%date] [%thread] [%cyan(%logger{0})]: %message%n"
+    currentLogFilename: /var/log/flipkart/alertz/alertz.log
+    archivedLogFilenamePattern: /var/log/flipkart/alertz/alertz-%d.log.gz
+    archivedFileCount: 10

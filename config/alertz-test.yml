@@ -1,4 +1,4 @@
-appName: "Flipkart Rule Processing Engine"
+appName: "Alerting Service"
 
 metricSourceClients: !!map
   GRAPHITE: "com.flipkart.alert.storage.GraphiteHttpClient"

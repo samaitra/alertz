@@ -1,9 +1,8 @@
-appName: "Flipkart Alerting Service"
+appName: "Alerting Service"
 
 metricSourceClients: !!map
   GRAPHITE: "com.flipkart.alert.storage.GraphiteHttpClient"
   TSDB: "com.flipkart.alert.storage.TsdbHttpClient"
-  CAS: "com.flipkart.alert.storage.health.CasHttpClient"
   HttpToFlatJson: "com.flipkart.alert.storage.HttpToFlatJsonClient"
 
 http:
@@ -32,7 +31,7 @@ ruleEventsConfiguration:
 
 metricArchiverConfiguration:
   enabled: true
-  metricArchiverClass:"com.flipkart.alert.storage.archiver.RRD4JFileMetricArchiver"
+  metricArchiverClass: "com.flipkart.alert.storage.archiver.RRD4JFileMetricArchiver"
   params: !!map
     basePath: "./"
 
@@ -44,10 +43,10 @@ graphiteConfiguration:
 
 logging:
   console:
-    enabled: false
+    enabled: true
     threshold: ALL
   file:
-    enabled: true
+    enabled: false
     threshold: ALL
     timeZone: IST
     logFormat: "%highlight(%-5level) [%date] [%thread] [%cyan(%logger{0})]: %message%n"
