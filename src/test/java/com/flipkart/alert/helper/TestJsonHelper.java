@@ -45,5 +45,4 @@ public class TestJsonHelper {
         logger.info("Observed Flattened Json :"+mapper.defaultPrettyPrintingWriter().writeValueAsString(observedFlattenedJsonMap));
         assertEquals(observedFlattenedJsonMap, expectedFlattenedJsonMap);
     }
-
 }

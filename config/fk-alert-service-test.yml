@@ -8,7 +8,7 @@ metricSourceClients: !!map
 
 metricArchiverConfiguration:
   enabled: true
-  metricArchiverClass: TSDBArchiver
+  metricArchiverClass: "com.flipkart.alert.storage.archiver.RRD4JFileMetricArchiver"
   params: !!map
     basePath: "./"
 

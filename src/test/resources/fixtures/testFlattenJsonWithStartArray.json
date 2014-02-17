@@ -47,9 +47,27 @@
              }
            ],
   "flatJsonMap" : {
-    "Key1" : "value1",
-    "Key2" : 10,
-    "Key3" : 10.0
+    "[0].sourceId" : 1,
+    "[0].name" : "tsdb",
+    "[0].sourceType" : "TSDB",
+    "[0].sourceConnectionParams[0].param" : "tsdbHost",
+    "[0].sourceConnectionParams[0].value" : "fk-alertservice-tsdb.nm.flipkart.com",
+    "[0].sourceConnectionParams[1].param" : "tsdbPort",
+    "[0].sourceConnectionParams[1].value" : "4242",
+    "[1].sourceId" : 2,
+    "[1].name" : "w3.tsdb",
+    "[1].sourceType" : "TSDB",
+    "[1].sourceConnectionParams[0].param" : "tsdbHost",
+    "[1].sourceConnectionParams[0].value" : "w3-tsdb6.nm.flipkart.com",
+    "[1].sourceConnectionParams[1].param" : "tsdbPort",
+    "[1].sourceConnectionParams[1].value" : "4242",
+    "[2].sourceId" : 3,
+    "[2].name" : "http1",
+    "[2].sourceType" : "HttpToFlatJson",
+    "[2].sourceConnectionParams[0].param" : "host",
+    "[2].sourceConnectionParams[0].value" : "localhost",
+    "[2].sourceConnectionParams[1].param" : "port",
+    "[2].sourceConnectionParams[1].value" : "4567"
   }
 }
 
