@@ -1,4 +1,4 @@
-![Architecture](https://github.com/Flipkart/fk-alertz/raw/master/alertz.png)<br>
+![Architecture](https://github.com/Flipkart/alertz/raw/master/alertz.png)<br>
 
 <br>fl-alertz is a light weight Quartz based Alerting Rule scheduling system which allows users to fetch metrics from data sources like Graphite, Opentsdb and run user defined rules on them for breaches.
 <br>
@@ -7,7 +7,7 @@
 <br><b>Scheduling Rule</b>
 <br>===============<br>
 To mine metrics from Metric collection system like Opentsdb or graphite you have to create jobs in fk-alert-system.<br>Http Operation to do the same :<br>
-HTTP POST on http://localhost:8080/fk-alert-service/scheduledRules with following request body :<br>
+HTTP POST on http://localhost:8080/alertz/scheduledRules with following request body :<br>
 <pre>
      {
          "name" : "r1",
@@ -49,9 +49,9 @@ HTTP POST on http://localhost:8080/fk-alert-service/scheduledRules with followin
 <br><b>Rule Status</b>
 <br>===============<br>
 To check the status of the rule fire following command :
-<br>HTTP GET on http://localhost:8080/fk-alert-service/scheduledRules/1/status
+<br>HTTP GET on http://localhost:8080/alertz/scheduledRules/1/status
 <br>OR with schedule name
-<br>HTTP GET on http://localhost:8080/fk-alert-service/scheduledRules/r1/status
+<br>HTTP GET on http://localhost:8080/alertz/scheduledRules/r1/status
 <pre>
 Output :
     {
@@ -69,14 +69,14 @@ Output :
 <br><b>Pause/Resume Rule</b>
 <br>===============<br>
 If you need to pause to rule execution for a while execute following
-<br>HTTP PUT on http://localhost:8080/fk-alert-service/scheduledRules/1/pause
+<br>HTTP PUT on http://localhost:8080/alertz/scheduledRules/1/pause
 <br>OR with schedule name
-<br>HTTP PUT on http://localhost:8080/fk-alert-service/scheduledRules/r1/pause
+<br>HTTP PUT on http://localhost:8080/alertz/scheduledRules/r1/pause
 <br>
 <b>To Resume :</b>
-<br>HTTP PUT on http://localhost:8080/fk-alert-service/scheduledRules/1/resume
+<br>HTTP PUT on http://localhost:8080/alertz/scheduledRules/1/resume
 <br>OR with schedule name
-<br>HTTP PUT on http://localhost:8080/fk-alert-service/scheduledRules/r1/resume
+<br>HTTP PUT on http://localhost:8080/alertz/scheduledRules/r1/resume
 
 <br>
 <br>
@@ -84,16 +84,16 @@ If you need to pause to rule execution for a while execute following
 <br><b>Rule Stats</b>
 <br>===============<br>
 How many times the rule has been executed and breached
-<br>HTTP POST on http://localhost:8080/fk-alert-service/scheduledRules/1/stats
+<br>HTTP POST on http://localhost:8080/alertz/scheduledRules/1/stats
 <br>OR with schedule name
-<br>HTTP POST on http://localhost:8080/fk-alert-service/scheduledRules/r1/stats
+<br>HTTP POST on http://localhost:8080/alertz/scheduledRules/r1/stats
 
 <br>
 <br>
 <br>===============
 <br><b>Update Rule</b>
 <br>===============<br>
-HTTP PUT on http://localhost:8080/fk-alert-service/scheduledRules/1 with following request body :<br>
+HTTP PUT on http://localhost:8080/alertz/scheduledRules/1 with following request body :<br>
 <pre>
      {
          "name" : "r1",
@@ -133,9 +133,9 @@ HTTP PUT on http://localhost:8080/fk-alert-service/scheduledRules/1 with followi
 <br><b>Delete Rule</b>
 <br>===============<br>
 How many times the rule has been executed and breached
-<br>HTTP DELETE on http://localhost:8080/fk-alert-service/scheduledRules/1
+<br>HTTP DELETE on http://localhost:8080/alertz/scheduledRules/1
 <br>OR with schedule name
-<br>HTTP DELETE on http://localhost:8080/fk-alert-service/scheduledRules/r1
+<br>HTTP DELETE on http://localhost:8080/alertz/scheduledRules/r1
 
 <br>
 <br>
@@ -144,7 +144,7 @@ How many times the rule has been executed and breached
 <br>======================<br>
 We used "w3.graphite" in creating above rule. System support addition of multiple graphite sources at runtime. And you can create using following command. This would be the first step in using this system if you haven't add any metric source so far or its a new system.
 <br>
-HTTP POST on http://localhost:8080/fk-alert-service/metricSources with following request body :<br>
+HTTP POST on http://localhost:8080/alertz/metricSources with following request body :<br>
 <pre>
     {
         "name": "scm.graphite",
@@ -167,22 +167,22 @@ HTTP POST on http://localhost:8080/fk-alert-service/metricSources with following
 <br>======================
 <br><b>Get Metric Source</b>
 <br>======================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/metricSources/1
-You can also use HTTP GET on http://localhost:8080/fk-alert-service/metricSources/scm.graphite
+<br>HTTP GET on http://localhost:8080/alertz/metricSources/1
+You can also use HTTP GET on http://localhost:8080/alertz/metricSources/scm.graphite
 
 <br>
 <br>
 <br>======================
 <br><b>Get All Metric Sources</b>
 <br>======================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/metricSources
+<br>HTTP GET on http://localhost:8080/alertz/metricSources
 
 <br>
 <br>
 <br>======================
 <br><b>Updating Metric Source</b>
 <br>======================<br>
-HTTP PUT on http://localhost:8080/fk-alert-service/metricSources/1 with following request body :<br>
+HTTP PUT on http://localhost:8080/alertz/metricSources/1 with following request body :<br>
 <pre>
     {
         "name": "scm.graphite",
@@ -200,22 +200,22 @@ HTTP PUT on http://localhost:8080/fk-alert-service/metricSources/1 with followin
     }
 </pre>
 <br>
-You can also use HTTP PUT on http://localhost:8080/fk-alert-service/metricSources/scm.graphite with following request body :<br>
+You can also use HTTP PUT on http://localhost:8080/alertz/metricSources/scm.graphite with following request body :<br>
 
 <br>
 <br>
 <br>======================
 <br><b>Delete Metric Source</b>
 <br>======================<br>
-<br>HTTP DELETE on http://localhost:8080/fk-alert-service/metricSources/1
-You can also use HTTP DELETE on http://localhost:8080/fk-alert-service/metricSources/scm.graphite
+<br>HTTP DELETE on http://localhost:8080/alertz/metricSources/1
+You can also use HTTP DELETE on http://localhost:8080/alertz/metricSources/scm.graphite
 
 <br>
 <br>
 <br>==================================================================
 <br><b>Get All Metrics that are being fetched by various rules</b>
 <br>==================================================================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/metrics
+<br>HTTP GET on http://localhost:8080/alertz/metrics
 <pre>
 Output:
     [
@@ -233,7 +233,7 @@ Output:
 <br>==================================================================
 <br><b>Get Last Value of particular metric</b>
 <br>==================================================================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/metrics/avg.series1
+<br>HTTP GET on http://localhost:8080/alertz/metrics/avg.series1
 <pre>
 Output:
     [
@@ -291,14 +291,14 @@ Output:
 <br>==================================================================
 <br><b>Get Metric instance with last alert</b>
 <br>==================================================================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/metrics/avg.series1/lastAlert
+<br>HTTP GET on http://localhost:8080/alertz/metrics/avg.series1/lastAlert
 
 <br>
 <br>
 <br>==================================================================
 <br><b>Check Generated Alerts</b>
 <br>==================================================================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/alerts
+<br>HTTP GET on http://localhost:8080/alertz/alerts
 <pre>
 Output
     {
@@ -313,7 +313,7 @@ Key is combination of ruleName-teamName
 <br>==================================================================
 <br><b>Get Last Alert</b>
 <br>==================================================================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/alerts/queues/r1-t1
+<br>HTTP GET on http://localhost:8080/alertz/alerts/queues/r1-t1
 <pre>
 Output
     [
@@ -381,7 +381,7 @@ Output
 <br>==================================================================
 <br><b>Get Last Alert in Nagios Format</b>
 <br>==================================================================<br>
-<br>HTTP GET on http://localhost:8080/fk-alert-service/alerts/queues/r1-t1/formats/NAGIOS
+<br>HTTP GET on http://localhost:8080/alertz/alerts/queues/r1-t1/formats/NAGIOS
 <pre>
 Output
     {
@@ -394,23 +394,23 @@ Output
 <br>Local Deployment
 <br>=================
 <br>1) <b>Environment</b> :Make sure you have sun-java6, maven installed
-<br>2) <b>Clone fk-alert-service</b> : git@github.com:Flipkart/fk-alert-service.git
+<br>2) <b>Clone alertz</b> : git@github.com:Flipkart/alertz.git
 <br>3) <b>create database 'fk_alert_service'</b> ./db/recreate_db.sh fk_alert_service
 <br>4) Change DB username and password if required in src/main/resources/quartz.properties and src/main/resources/hibernate.cfg.xml
 <br>5) <b>Build project assembly</b> : mvn clean compile assembly:assembly
-<br>6) <b>Start Service</b>  :java -jar target/fk-alert-service-1.0-SNAPSHOT-jar-with-dependencies.jar
+<br>6) <b>Start Service</b>  :java -jar target/alertz-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 
 <br>======================
 <br>App Production Deployment
 <br>======================
-<br>1) <b>Clone fk-alert-service</b> : git@github.com:Flipkart/fk-alert-service.git
+<br>1) <b>Clone alertz</b> : git@github.com:Flipkart/alertz.git
 <br>2) <b>cd DEBIAN</b>
-<br>3) <b>Change product versions in create_fk-alert-service_deb.sh </b>
-<br>4) <b>./create_fk-alert-service_deb.sh </b>
+<br>3) <b>Change product versions in create_alertz_deb.sh </b>
+<br>4) <b>./create_alertz_deb.sh </b>
 <br>5) <b>Push To Prod Repo </b> :Follow Steps in https://wiki.corp.flipkart.com/index.php/Upload_arbitrary_package_to_FLO_apt-repo to upload the generated debian package to prod repo.
-<br>6) <b>Install</b> : Go to alertz-app1.nm.flipkart.com. sudo apt-get update. sudo apt-get remove fk-alert-service. sudo apt-get install fk-alert-service
-<br>7) <b>If its first time</b> : sudo /etc/init.d/fk-alert-service create_db and then sudo /etc/init.d/fk-alert-service start
+<br>6) <b>Install</b> : Go to alertz-app1.nm.flipkart.com. sudo apt-get update. sudo apt-get remove alertz. sudo apt-get install alertz
+<br>7) <b>If its first time</b> : sudo /etc/init.d/alertz create_db and then sudo /etc/init.d/alertz start
 
 <br>======================
 <br>Nagios Crontab Entry Production Deployment

@@ -6,17 +6,17 @@
  * To change self template use File | Settings | File Templates.
  */
 
-var getAllRulesUrl = '/fk-alert-service/onDemandRules';
-var getRuleByNameUrl = '/fk-alert-service/onDemandRules/$ruleName';
-var getRulesForTeamUrl = '/fk-alert-service/teams/$teamName/onDemandRules';
-var getTeamsUrl = '/fk-alert-service/teams/onDemandRules';
+var getAllRulesUrl = '/alertz/onDemandRules';
+var getRuleByNameUrl = '/alertz/onDemandRules/$ruleName';
+var getRulesForTeamUrl = '/alertz/teams/$teamName/onDemandRules';
+var getTeamsUrl = '/alertz/teams/onDemandRules';
 var getRuleUiLink = '/viewOnDemandRule.html?ruleName=$ruleName';
 var updateRuleUiLink = '/updateOnDemandRule.html?ruleName=$ruleName';
-var deleteRuleUrl = '/fk-alert-service/onDemandRules/$ruleId';
-var getRuleNamesUrl = '/fk-alert-service/onDemandRules/names?startsWith=$startsWith';
-var getRuleStatUrl = '/fk-alert-service/onDemandRules/$ruleId/latestStats';
-var getTeamsForOnDemandRuleUrl = '/fk-alert-service/teams/onDemandRules'
-var getOnDemandTeamsUrl = '/fk-alert-service/teams/$teamName/onDemandRules'
+var deleteRuleUrl = '/alertz/onDemandRules/$ruleId';
+var getRuleNamesUrl = '/alertz/onDemandRules/names?startsWith=$startsWith';
+var getRuleStatUrl = '/alertz/onDemandRules/$ruleId/latestStats';
+var getTeamsForOnDemandRuleUrl = '/alertz/teams/onDemandRules'
+var getOnDemandTeamsUrl = '/alertz/teams/$teamName/onDemandRules'
 var breachThreshold = 10;
 
 $(document).ready(function () {

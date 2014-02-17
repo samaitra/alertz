@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/fk-alertz.iml" filepath="$PROJECT_DIR$/fk-alertz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alertz.iml" filepath="$PROJECT_DIR$/alertz.iml" />
     </modules>
   </component>
 </project>

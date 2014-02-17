@@ -5,10 +5,10 @@
  * Time: 2:07 PM
  * To change this template use File | Settings | File Templates.
  */
-var getRuleByNameUrl = '/fk-alert-service/onDemandRules/$ruleName';
-var getRuleStatUrl ='/fk-alert-service/onDemandRules/$ruleId/latestStats';
+var getRuleByNameUrl = '/alertz/onDemandRules/$ruleName';
+var getRuleStatUrl ='/alertz/onDemandRules/$ruleId/latestStats';
 var updateRuleUiLink = '/updateOnDemandRule.html?ruleName=$ruleName';
-var deleteRuleUrl = '/fk-alert-service/onDemandRules/$ruleId';
+var deleteRuleUrl = '/alertz/onDemandRules/$ruleId';
 var viewRulesUrl = '/viewOnDemandRules.html?teamName=$teamName';
 
 $(document).ready(function () {

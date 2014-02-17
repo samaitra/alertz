@@ -39,7 +39,6 @@ public class AlertService extends Service<AlertServiceConfiguration> {
         environment.addResource(new MetricSourceResource());
         environment.addResource(new TeamResource());
         environment.addResource(new OnDemandRuleResource());
-        environment.addResource(new NagiosResource());
         environment.addResource(new MetricSourceTypeResource(configuration.getMetricSourceClients().keySet()));
         environment.addResource(new ConfigurationResource(configuration));
         environment.addResource(new MetricArchiverResource());

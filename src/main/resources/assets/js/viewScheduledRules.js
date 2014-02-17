@@ -6,15 +6,15 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var getAllRulesUrl = '/fk-alert-service/scheduledRules';
-var getRuleByNameUrl = '/fk-alert-service/scheduledRules/$ruleName';
-var getRulesForTeamUrl = '/fk-alert-service/teams/$teamName/scheduledRules';
-var getTeamsUrl = '/fk-alert-service/teams/scheduledRules';
-var getRuleStatUrl ='/fk-alert-service/scheduledRules/$ruleId/latestStats';
+var getAllRulesUrl = '/alertz/scheduledRules';
+var getRuleByNameUrl = '/alertz/scheduledRules/$ruleName';
+var getRulesForTeamUrl = '/alertz/teams/$teamName/scheduledRules';
+var getTeamsUrl = '/alertz/teams/scheduledRules';
+var getRuleStatUrl ='/alertz/scheduledRules/$ruleId/latestStats';
 var getRuleUiLink = '/viewScheduledRule.html?ruleName=$ruleName';
 var updateRuleUiLink = '/updateScheduledRule.html?ruleName=$ruleName';
-var deleteRuleUrl = '/fk-alert-service/scheduledRules/$ruleId';
-var getRuleNamesUrl = '/fk-alert-service/scheduledRules/names?startsWith=$startsWith';
+var deleteRuleUrl = '/alertz/scheduledRules/$ruleId';
+var getRuleNamesUrl = '/alertz/scheduledRules/names?startsWith=$startsWith';
 
 $(document).ready(function () {
     $("#ruleName").typeahead({

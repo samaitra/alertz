@@ -8,7 +8,7 @@
 
 
 function getMetricSource(sourceName) {
-    var url = '/fk-alert-service/metricSources/' + sourceName;
+    var url = '/alertz/metricSources/' + sourceName;
     var response;
     $.ajax({
                 type: 'GET',
@@ -37,7 +37,7 @@ function getMetricSourceNames(){
 
 
 function getMetricSources(){
-    var url = '/fk-alert-service/metricSources/';
+    var url = '/alertz/metricSources/';
     var response;
     $.ajax({
                 type: 'GET',

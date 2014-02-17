@@ -7,8 +7,8 @@
  */
 
 
-var getRuleByNameUrl = '/fk-alert-service/scheduledRules/$ruleName';
-var updateRuleUrl = '/fk-alert-service/scheduledRules/$ruleId';
+var getRuleByNameUrl = '/alertz/scheduledRules/$ruleName';
+var updateRuleUrl = '/alertz/scheduledRules/$ruleId';
 
 $(document).ready(function () {
     $('#headerPlaceHolder').load("/header.html");

@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.flipkart.alert</groupId>
-    <artifactId>fk-alertz</artifactId>
+    <artifactId>alertz</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
 
-    <name>fk-alertz</name>
+    <name>alertz</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -271,7 +271,7 @@
                 <configuration>
                     <mainClass>com.flipkart.alert.AlertService</mainClass>
                     <arguments>
-                        <argument>config/fk-alert-service.yml</argument>
+                        <argument>config/alertz.yml</argument>
                     </arguments>
                 </configuration>
             </plugin>

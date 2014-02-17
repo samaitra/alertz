@@ -6,8 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var getRuleByNameUrl = '/fk-alert-service/onDemandRules/$ruleName';
-var updateRuleUrl = '/fk-alert-service/onDemandRules/$ruleId';
+var getRuleByNameUrl = '/alertz/onDemandRules/$ruleName';
+var updateRuleUrl = '/alertz/onDemandRules/$ruleId';
 
 $(document).ready(function () {
     $('#headerPlaceHolder').load("/header.html");

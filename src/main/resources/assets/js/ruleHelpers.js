@@ -221,7 +221,7 @@ function deleteRule(ruleId) {
 }
 
 function runRule(ruleId) {
-    var url = "/fk-alert-service/scheduledRules/" + ruleId + "/forceRun";
+    var url = "/alertz/scheduledRules/" + ruleId + "/forceRun";
     $.ajax({
         type: 'POST',
         url: url,
@@ -241,7 +241,7 @@ function runRule(ruleId) {
 }
 
 function getRuleStatus(ruleId) {
-    var url = '/fk-alert-service/scheduledRules/' + ruleId + "/status";
+    var url = '/alertz/scheduledRules/' + ruleId + "/status";
     var response;
     $.ajax({
         type: 'GET',
@@ -495,11 +495,11 @@ function getRuleForKO(ruleName) {
                         }
 
                         checkStat.updateImg = function() {
-                            checkStat.img("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&o=&wxh=600x300&png");
-                            checkStat.breachedImg("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&metricType=BREACH&o=&wxh=600x300&png");
+                            checkStat.img("/alertz/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&o=&wxh=600x300&png");
+                            checkStat.breachedImg("/alertz/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&metricType=BREACH&o=&wxh=600x300&png");
                         }
-                        checkStat.img = ko.observable("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&o=&wxh=600x300&png");
-                        checkStat.breachedImg = ko.observable("/fk-alert-service/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&metricType=BREACH&o=&wxh=600x300&png");
+                        checkStat.img = ko.observable("/alertz/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&o=&wxh=600x300&png");
+                        checkStat.breachedImg = ko.observable("/alertz/archivedMetrics/rules/" + rule["ruleId"] + "?start=" + checkStat.fromTimeInputValue + "&end=" + checkStat.toTimeInputValue + "&metricType=BREACH&o=&wxh=600x300&png");
                     }
                 });
             }
@@ -530,7 +530,7 @@ function getRuleForKO(ruleName) {
 }
 
 function getDataArchivalSource() {
-    var url = '/fk-alert-service/configurations/metricArchiverConfiguration';
+    var url = '/alertz/configurations/metricArchiverConfiguration';
     var response;
     $.ajax({
         type: 'GET',
@@ -618,7 +618,7 @@ function initPopOver() {
 }
 
 function pauseAllTeamRule(teamName) {
-    var url = "/fk-alert-service/teams/" + teamName + "/pauseRules";
+    var url = "/alertz/teams/" + teamName + "/pauseRules";
     var response;
     $.ajax({
         type: 'PUT',
@@ -638,7 +638,7 @@ function pauseAllTeamRule(teamName) {
 }
 
 function resumeAllTeamRule(teamName) {
-    var url = "/fk-alert-service/teams/" + teamName + "/resumeRules";
+    var url = "/alertz/teams/" + teamName + "/resumeRules";
     var response;
     $.ajax({
         type: 'PUT',
@@ -658,7 +658,7 @@ function resumeAllTeamRule(teamName) {
 }
 
 function pauseRule(ruleId) {
-    var url = '/fk-alert-service/scheduledRules/' + ruleId + '/pause';
+    var url = '/alertz/scheduledRules/' + ruleId + '/pause';
     var response;
     $.ajax({
         type: 'PUT',
@@ -678,7 +678,7 @@ function pauseRule(ruleId) {
 }
 
 function resumeRule(ruleId) {
-    var url = '/fk-alert-service/scheduledRules/' + ruleId + '/resume';
+    var url = '/alertz/scheduledRules/' + ruleId + '/resume';
     var response;
     $.ajax({
         type: 'PUT',
@@ -698,7 +698,7 @@ function resumeRule(ruleId) {
 }
 
 function getAllJobDetailsForTeam(teamName) {
-    var url = "/fk-alert-service/teams/" + teamName + "/allJobDetails";
+    var url = "/alertz/teams/" + teamName + "/allJobDetails";
     var response;
     $.ajax({
         type: 'GET',

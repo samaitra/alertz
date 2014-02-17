@@ -2,12 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dfae935-b023-4b8b-adbf-5a054bb7a354" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/fk-alert-service.yml" afterPath="$PROJECT_DIR$/config/fk-alert-service.yml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/READMENOW" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/create_fk-alert-service_deb.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/fk-alert-service.control" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/fk-alert-service.init" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/fk-alert-service.postinst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/fk-alert-service.postrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/fk-alert-service.preinst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DEBIAN/fk-alert-service.prerm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/OpenTsdbClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config/.fk-alert-service.yml.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config/nm/hibernate.cfg.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config/nm/quartz.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/NagiosDispatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/NagiosAlertYaml.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/NagiosService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/NagiosServiceEscalation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/NagiosResource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/NagiosYamlWriter.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/fk-alert-service-dev.yml" afterPath="$PROJECT_DIR$/config/alertz-dev.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/fk-alert-service-test.yml" afterPath="$PROJECT_DIR$/config/alertz-test.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/fk-alert-service.yml" afterPath="$PROJECT_DIR$/config/alertz.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml" afterPath="$PROJECT_DIR$/config/sample/alertz-rrd4j-fs-archival.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml" afterPath="$PROJECT_DIR$/config/sample/alertz-tsdb-archival.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fk-alertz.iml" afterPath="$PROJECT_DIR$/alertz.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java" afterPath="$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/createOnDemandRule.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/createOnDemandRule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/createScheduledRule.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/createScheduledRule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/create_db.sql" afterPath="$PROJECT_DIR$/db/create_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/create_test_db.sh" afterPath="$PROJECT_DIR$/db/create_test_db.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/mail.properties" afterPath="$PROJECT_DIR$/config/mail.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/metricSources.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/metricSources.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/quartz.properties" afterPath="$PROJECT_DIR$/src/main/resources/quartz.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/ruleHelpers.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/ruleHelpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/updateRule.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/updateRule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/updateScheduledRule.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/updateScheduledRule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRule.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRules.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRules.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRulesMetrics.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRulesMetrics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRule.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRules.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRules.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRulesMetrics.js" afterPath="$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRulesMetrics.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fk-alertz.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392619539874" ignored="false" />
+    <file path="/Dummy.txt" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392626505541" ignored="false" />
     <file path="/fragment.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392278545143" ignored="false" />
     <file path="/README.md" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1391763515461" ignored="false" />
     <file path="/create_tables.sql" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1391765308967" ignored="false" />
@@ -36,6 +84,12 @@
     <file path="/OnDemandRuleEvent.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392289953708" ignored="false" />
     <file path="/fk-alert-service-test.yml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392290277686" ignored="false" />
     <file path="/MetricSourceClientFactory.java" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392290625449" ignored="false" />
+    <file path="/create_db.sql" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392626634664" ignored="false" />
+    <file path="/create_test_db.sh" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392626654466" ignored="false" />
+    <file path="/hibernate.cfg.xml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392626804145" ignored="false" />
+    <file path="/alertz-dev.yml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392627000104" ignored="false" />
+    <file path="/alertz-rrd4j-fs-archival.yml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392627758292" ignored="false" />
+    <file path="/alertz-tsdb-archival.yml" changelist="4dfae935-b023-4b8b-adbf-5a054bb7a354" time="1392627764275" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,94 +161,86 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="fk-alertz" />
+    <favorites_list name="alertz" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="fk-alert-service-test.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/fk-alert-service-test.yml">
+      <file leaf-file-name="alertz-rrd4j-fs-archival.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/sample/alertz-rrd4j-fs-archival.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="-7.12">
+            <state line="10" column="20" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestJsonHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/flipkart/alert/helper/TestJsonHelper.java">
+      <file leaf-file-name="alertz-tsdb-archival.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/sample/alertz-tsdb-archival.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="67" selection-start="894" selection-end="894" vertical-scroll-proportion="-1.96">
+            <state line="26" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlertService.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="alertz-dev.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/alertz-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="22" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlertService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="40" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.0">
+            <state line="41" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.33179724">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <file leaf-file-name="viewOnDemandRule.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="84" selection-start="1517" selection-end="1533" vertical-scroll-proportion="0.0">
+            <state line="10" column="28" selection-start="378" selection-end="384" vertical-scroll-proportion="-3.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleJob.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/schedule/RuleJob.java">
+      <file leaf-file-name="viewOnDemandRulesMetrics.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRulesMetrics.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="18" column="28" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testFlattenJsonWithStartArray.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/fixtures/testFlattenJsonWithStartArray.json">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="4" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.0">
+            <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fk-alert-service-rrd4j-fs-archival.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml">
+      <file leaf-file-name="alertz-test.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/alertz-test.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="83" selection-start="1319" selection-end="1342" vertical-scroll-proportion="0.0">
+            <state line="28" column="0" selection-start="930" selection-end="930" vertical-scroll-proportion="-16.8">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fk-alert-service-tsdb-archival.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml">
+      <file leaf-file-name="alertz.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/alertz.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fk-alert-service.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/fk-alert-service.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="23" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RRD4JFileMetricArchiver.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/RRD4JFileMetricArchiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="43" selection-start="8" selection-end="43" vertical-scroll-proportion="-0.03524229">
+            <state line="53" column="55" selection-start="1415" selection-end="1415" vertical-scroll-proportion="-10.96">
               <folding />
             </state>
           </provider>
@@ -218,30 +264,23 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/StatusDispatcherConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatchService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/domain/OnDemandRuleEvent.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/flipkart/alert/integration/BaseIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/util/RuleHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/dispatch/StatusDispatcherThread.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/ruleHelpers.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRules.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRulesMetrics.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/updateScheduledRule.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/metricSources.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/createOnDemandRule.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/updateRule.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRule.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRulesMetrics.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/config/alertz-test.yml" />
+        <option value="$PROJECT_DIR$/config/alertz.yml" />
+        <option value="$PROJECT_DIR$/config/sample/alertz-rrd4j-fs-archival.yml" />
+        <option value="$PROJECT_DIR$/config/sample/alertz-tsdb-archival.yml" />
+        <option value="$PROJECT_DIR$/config/alertz-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/config/AlertServiceConfiguration.java" />
-        <option value="$PROJECT_DIR$/config/fk-alert-service-dev.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/MetricSourceClientFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/exception/JobAlreadyExistsException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/ScheduledRuleResource.java" />
-        <option value="$PROJECT_DIR$/config/fk-alert-service-test.yml" />
-        <option value="$PROJECT_DIR$/src/test/resources/fixtures/testFlattenJsonWithStartArray.json" />
-        <option value="$PROJECT_DIR$/src/test/java/com/flipkart/alert/helper/TestJsonHelper.java" />
-        <option value="$PROJECT_DIR$/config/fk-alert-service.yml" />
       </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -276,31 +315,32 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -310,29 +350,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -343,44 +365,14 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -398,11 +390,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -424,11 +416,145 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dispatch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -438,11 +564,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
+              <option name="myItemId" value="alertz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -454,41 +580,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fk-alertz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/com/flipkart/alert" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
@@ -594,6 +697,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -619,19 +735,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -714,27 +817,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32328767" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32328767" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5673077" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75" sideWeight="0.29926026" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29186282" sideWeight="0.41895604" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29186282" sideWeight="0.67671233" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58104396" sideWeight="0.6960323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -799,114 +902,107 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/MetricSourceClientFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRules.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+        <state line="17" column="24" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/exception/JobAlreadyExistsException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/viewScheduledRulesMetrics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+        <state line="14" column="33" selection-start="551" selection-end="557" vertical-scroll-proportion="-3.2">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/resource/ScheduledRuleResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/updateScheduledRule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="26" selection-start="5060" selection-end="5060" vertical-scroll-proportion="0.0">
+        <state line="10" column="28" selection-start="246" selection-end="252" vertical-scroll-proportion="-2.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/metricSources.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="22" selection-start="989" selection-end="995" vertical-scroll-proportion="-10.7">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/createOnDemandRule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="229" selection-end="235" vertical-scroll-proportion="-1.7">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/updateRule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="28" selection-start="245" selection-end="251" vertical-scroll-proportion="-1.7">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="378" selection-end="384" vertical-scroll-proportion="-3.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/js/viewOnDemandRulesMetrics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="23" selection-start="3109" selection-end="3109" vertical-scroll-proportion="0.0">
+        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/fk-alert-service-dev.yml">
+    <entry file="file://$PROJECT_DIR$/config/alertz-test.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="36" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+        <state line="28" column="0" selection-start="930" selection-end="930" vertical-scroll-proportion="-16.8">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/TSDBMetricArchiver.java">
+    <entry file="file://$PROJECT_DIR$/config/alertz.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="68" selection-start="1612" selection-end="1617" vertical-scroll-proportion="0.0">
+        <state line="53" column="55" selection-start="1415" selection-end="1415" vertical-scroll-proportion="-10.96">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/fk-alert-service-test.yml">
+    <entry file="file://$PROJECT_DIR$/config/sample/alertz-rrd4j-fs-archival.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="-7.12">
+        <state line="10" column="20" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/fixtures/testFlattenJsonWithStartArray.json">
+    <entry file="file://$PROJECT_DIR$/config/sample/alertz-tsdb-archival.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="4" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.0">
+        <state line="26" column="0" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/flipkart/alert/helper/TestJsonHelper.java">
+    <entry file="file://$PROJECT_DIR$/config/alertz-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="67" selection-start="894" selection-end="894" vertical-scroll-proportion="-1.96">
+        <state line="28" column="22" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/AlertService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="40" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="84" selection-start="1517" selection-end="1533" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/schedule/RuleJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-tsdb-archival.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/sample/fk-alert-service-rrd4j-fs-archival.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="83" selection-start="1319" selection-end="1342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/fk-alert-service.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="23" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/flipkart/alert/storage/archiver/RRD4JFileMetricArchiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="43" selection-start="8" selection-end="43" vertical-scroll-proportion="-0.03524229">
+        <state line="41" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.33179724">
           <folding />
         </state>
       </provider>

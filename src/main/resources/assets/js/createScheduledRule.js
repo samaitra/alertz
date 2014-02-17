@@ -6,8 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var createRuleUrl = '/fk-alert-service/scheduledRules';
-var getTeamsUrl = '/fk-alert-service/teams/scheduledRules';
+var createRuleUrl = '/alertz/scheduledRules';
+var getTeamsUrl = '/alertz/teams/scheduledRules';
 
 $(document).ready(function () {
     $("#teams").typeahead({source: getTeams()});

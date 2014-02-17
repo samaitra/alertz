@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="fk-alertz" />
+        <module name="alertz" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="fk-alertz" target="1.6" />
+      <module name="alertz" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

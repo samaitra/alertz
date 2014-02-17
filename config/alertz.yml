@@ -9,7 +9,7 @@ metricSourceClients: !!map
 http:
   port: 8888
   adminPort: 8881
-  rootPath: "/fk-alert-service/*"
+  rootPath: "/alertz/*"
 
 statusDispatcherServiceConfiguration:
   poolSize: 25
@@ -25,15 +25,6 @@ statusDispatcherServiceConfiguration:
       className: "com.flipkart.alert.dispatch.HttpQueueStatusDispatcher"
       defaultParams: !!map
         defaultQueue: "defaultQueue"
-    NAGIOS:
-      className: "com.flipkart.alert.dispatch.NagiosDispatcher"
-      defaultParams: !!map
-        nsca_wrapper: "/usr/lib/nagios/plugins/fk-ops-nsca-wrapper/nsca_wrapper"
-        IP: "10.65.100.85:10.65.100.86"
-        host: "fk-w3-alertservice1"
-        binary: "/usr/sbin/send_nsca"
-        config: "/etc/send_nsca.cfg"
-        nagiosHelper: "/bin/fk-alert-service/nagios_helper.sh"
 
 ruleEventsConfiguration:
   poolSize: 15
@@ -60,6 +51,6 @@ logging:
     threshold: ALL
     timeZone: IST
     logFormat: "%highlight(%-5level) [%date] [%thread] [%cyan(%logger{0})]: %message%n"
-    currentLogFilename: /var/log/flipkart/fk-alert-service/fk-alert-service.log
-    archivedLogFilenamePattern: /var/log/flipkart/fk-alert-service/fk-alert-service-%d.log.gz
+    currentLogFilename: /var/log/flipkart/alertz/alertz.log
+    archivedLogFilenamePattern: /var/log/flipkart/alertz/alertz-%d.log.gz
     archivedFileCount: 10

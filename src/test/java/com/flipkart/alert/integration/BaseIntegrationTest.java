@@ -43,7 +43,7 @@ public class BaseIntegrationTest extends TestNGResourceTest {
     private void initiateService() throws FileNotFoundException, InvocationTargetException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InstantiationException {
         Loader loader = new Loader(new Constructor(AlertServiceConfiguration.class));
         Yaml yaml = new Yaml(loader);
-        configuration = (AlertServiceConfiguration) yaml.load(new FileInputStream("config/fk-alert-service-test.yml"));
+        configuration = (AlertServiceConfiguration) yaml.load(new FileInputStream("config/alertz-test.yml"));
 
         metricSourceClientFactory = MetricSourceClientFactory.buildFactory(MetricSource.getAll(MetricSource.class),
                 configuration.getMetricSourceClients());

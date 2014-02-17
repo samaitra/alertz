@@ -7,15 +7,15 @@
  */
 
 
-var getAllRulesUrl = '/fk-alert-service/onDemandRules';
-var getRuleByNameUrl = '/fk-alert-service/onDemandRules/$ruleName';
-var getRulesForTeamUrl = '/fk-alert-service/teams/$teamName/onDemandRules';
-var getTeamsUrl = '/fk-alert-service/teams/onDemandRules';
-var getRuleStatUrl ='/fk-alert-service/onDemandRules/$ruleId/latestStats';
+var getAllRulesUrl = '/alertz/onDemandRules';
+var getRuleByNameUrl = '/alertz/onDemandRules/$ruleName';
+var getRulesForTeamUrl = '/alertz/teams/$teamName/onDemandRules';
+var getTeamsUrl = '/alertz/teams/onDemandRules';
+var getRuleStatUrl ='/alertz/onDemandRules/$ruleId/latestStats';
 var getRuleUiLink = '/viewOnDemandRule.html?ruleName=$ruleName';
 var updateRuleUiLink = '/updateOnDemandRule.html?ruleName=$ruleName';
-var deleteRuleUrl = '/fk-alert-service/onDemandRules/$ruleId';
-var getRuleNamesUrl = '/fk-alert-service/onDemandRules/names?startsWith=$startsWith';
+var deleteRuleUrl = '/alertz/onDemandRules/$ruleId';
+var getRuleNamesUrl = '/alertz/onDemandRules/names?startsWith=$startsWith';
 
 $(document).ready(function () {
     $("#ruleName").typeahead({
