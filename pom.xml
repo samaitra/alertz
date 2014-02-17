@@ -13,35 +13,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>libs-release</name>
-            <url>http://artifactory.nm.flipkart.com:8081/artifactory/libs-release</url>
-        </repository>
-        <repository>
-            <snapshots />
-            <id>snapshots</id>
-            <name>libs-snapshot</name>
-            <url>http://artifactory.nm.flipkart.com:8081/artifactory/libs-snapshot</url>
-        </repository>
-        <repository>
-            <snapshots />
-            <id>snapshots1</id>
-            <name>libs-snapshot</name>
-            <url> http://repo1.maven.org/maven2</url>
-        </repository>
-        <repository>
-            <id>libs-releases-local</id>
-            <name>libs-releases-local</name>
-            <url>http://artifactory.nm.flipkart.com:8081/artifactory/libs-releases-local</url>
-        </repository>
-
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>org.rrd4j</groupId>
@@ -54,20 +25,10 @@
             <version>4.0.0.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>jfree</groupId>
-            <artifactId>jfreechart</artifactId>
-            <version>1.0.13</version>
-        </dependency>
-        <dependency>
             <groupId>com.yammer.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
             <version>0.5.1</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.netty</groupId>
-            <artifactId>netty</artifactId>
-            <version>3.5.2.Final</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -167,11 +128,6 @@
             <version>2.1.6</version>
         </dependency>
         <dependency>
-            <groupId>com.flipkart.http</groupId>
-            <artifactId>jhttpclient</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>1.12</version>
@@ -192,14 +148,14 @@
             <version>0.11.8</version>
         </dependency>
         <dependency>
-            <groupId>com.flipkart.javacasclient</groupId>
-            <artifactId>JavaCasClient</artifactId>
-            <version>1.2.1</version>
-        </dependency>
-        <dependency>
             <groupId>com.yammer.metrics</groupId>
             <artifactId>metrics-graphite</artifactId>
             <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ning</groupId>
+            <artifactId>async-http-client</artifactId>
+            <version>1.7.9</version>
         </dependency>
     </dependencies>
 
