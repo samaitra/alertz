@@ -1,4 +1,5 @@
-![Architecture](https://github.com/Flipkart/fk-alertz/blob/master/alertz.png)<br>
+![Architecture](https://github.com/Flipkart/fk-alertz/raw/master/alertz.png)<br>
+
 <br>fl-alertz is a light weight Quartz based Alerting Rule scheduling system which allows users to fetch metrics from data sources like Graphite, Opentsdb and run user defined rules on them for breaches.
 <br>
 <br>
