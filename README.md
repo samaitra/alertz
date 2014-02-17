@@ -6,7 +6,7 @@
 <br>===============
 <br><b>Getting Started</b>
 <br>===============<br>
-<br>1) <b>Environment</b> :Make sure you have sun-java6, maven installed
+<br>1) <b>Environment</b> :Make sure you have git, mysql, sun-java6, maven installed
 <br>2) <b>Clone alertz</b> : git@github.com:Flipkart/alertz.git
 <br>3) <b>create database 'alertz'</b> ./db/recreate_db.sh alertz
 <br>4) Change DB username and password if required in src/main/resources/quartz.properties and src/main/resources/hibernate.cfg.xml
