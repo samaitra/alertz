@@ -1,7 +1,6 @@
 package com.flipkart.alert.schedule;
 
 import com.flipkart.alert.dispatch.StatusDispatchService;
-import com.flipkart.http.HTTPRequest;
 import com.yammer.dropwizard.logging.Log;
 import com.flipkart.alert.domain.*;
 import com.flipkart.alert.storage.SourceClient;
@@ -93,7 +92,6 @@ public class RuleJob implements Job {
     private synchronized List<Metric> getMetrics(Set<DataSeries> dataSeriesSet) throws JobExecutionException{
 
         List<Metric> metrics = new ArrayList<Metric>();
-        HTTPRequest httpRequest = null;
         SourceClient sourceClient = null;
 
         for(DataSeries seriesInfo : dataSeriesSet) {
@@ -124,11 +122,7 @@ public class RuleJob implements Job {
                 throw new JobExecutionException(e);
             } catch (InterruptedException e) {
                 throw new JobExecutionException(e);
-            } finally {
-                if(httpRequest != null)
-                    httpRequest.releaseConnection();
             }
-
         }
 
         return metrics;
